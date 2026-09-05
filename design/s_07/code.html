@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full gap-space-4">
+<!-- Top Utility Bar / Control Breadcrumb within canvas -->
+<div class="flex items-center justify-between bg-surface-card px-space-4 py-space-2 rounded-lg shadow-sm">
+<div class="flex items-center gap-space-3">
+<div class="flex items-center gap-space-1 text-text-muted font-caption text-caption">
+<span>Ставропольский край</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Шпаковский район</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-text-primary font-medium">Сравнительный анализ вегетации</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-caption font-caption bg-brand-weak text-sensor-s2">
+        Режим S-07
+      </span>
+</div>
+<div class="flex items-center gap-space-2">
+<div class="flex items-center bg-surface-sunken p-0.5 rounded-lg">
+<button class="px-space-3 py-1 text-small font-small bg-surface-card text-text-primary rounded shadow-sm" type="button">NDVI</button>
+<button class="px-space-3 py-1 text-small font-small text-text-secondary hover:text-text-primary" type="button">EVI</button>
+<button class="px-space-3 py-1 text-small font-small text-text-secondary hover:text-text-primary" type="button">NDWI</button>
+</div>
+<button class="flex items-center gap-1.5 h-8 px-space-3 bg-surface-card text-text-secondary hover:text-text-primary rounded-lg shadow-sm text-small font-small" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Параметры фильтра</span>
+</button>
+<button class="flex items-center gap-1 h-8 px-space-3 bg-sensor-s2 text-on-primary rounded-lg text-small font-medium shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Экспорт отчёта</span>
+</button>
+</div>
+</div>
+<!-- Block 1: Map Overview (~280px height) -->
+<div class="relative w-full h-[280px] bg-surface-card rounded-lg overflow-hidden shadow-sm flex flex-col justify-between">
+<!-- Map Canvas (Vector/Synthetic Cartography Layout) -->
+<div class="absolute inset-0 bg-surface-sunken overflow-hidden">
+<!-- Grid Lines Pattern -->
+<svg class="absolute inset-0 w-full h-full stroke-gridline opacity-70" height="100%" width="100%">
+<defs>
+<pattern height="48" id="carto-grid" patternunits="userSpaceOnUse" width="48">
+<path d="M 48 0 L 0 0 0 48" fill="none" stroke-width="0.75"></path>
+</pattern>
+</defs>
+<rect fill="url(#carto-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Cartographic Geographic Underlay Lines (Roads, rivers, terrain outlines) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 1120 280">
+<!-- Minor road / water veins -->
+<path d="M-20,190 Q220,160 480,210 T960,140 Q1050,110 1150,130" fill="none" stroke="#dcd9d9" stroke-width="2.5"></path>
+<path d="M120,-10 Q160,90 280,140 T540,290" fill="none" stroke="#e1e0d9" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M720,-10 Q780,120 900,180 T1140,240" fill="none" stroke="#e1e0d9" stroke-dasharray="6 3" stroke-width="1.5"></path>
+<!-- Polygon 1: Поле №3 у Аксая (Blue #2a78d6) -->
+<polygon fill="#2a78d6" fill-opacity="0.16" points="210,75 360,55 395,145 285,185 190,135" stroke="#2a78d6" stroke-linejoin="round" stroke-width="2.2"></polygon>
+<circle cx="288" cy="119" fill="#2a78d6" r="3.5"></circle>
+<text class="fill-text-primary text-[11px] font-medium select-none tracking-tight" x="296" y="123">№3 Аксай (142 га)</text>
+<!-- Polygon 2: Северное (Orange #eb6834) -->
+<polygon fill="#eb6834" fill-opacity="0.16" points="460,40 620,30 670,115 580,165 440,110" stroke="#eb6834" stroke-linejoin="round" stroke-width="2.2"></polygon>
+<circle cx="554" cy="92" fill="#eb6834" r="3.5"></circle>
+<text class="fill-text-primary text-[11px] font-medium select-none tracking-tight" x="562" y="96">Северное (218 га)</text>
+<!-- Polygon 3: Контур OSM way/123456 (Green #1baf7a) -->
+<polygon fill="#1baf7a" fill-opacity="0.16" points="730,85 890,70 940,170 820,225 710,175" stroke="#1baf7a" stroke-linejoin="round" stroke-width="2.2"></polygon>
+<circle cx="818" cy="150" fill="#1baf7a" r="3.5"></circle>
+<text class="fill-text-primary text-[11px] font-medium select-none tracking-tight" x="826" y="154">OSM way/123456 (96 га)</text>
+</svg>
+</div>
+<!-- Map Top HUD Bar -->
+<div class="relative z-10 flex items-center justify-between p-space-3 pointer-events-none">
+<div class="flex items-center gap-space-2 pointer-events-auto">
+<span class="px-2 py-1 rounded bg-surface-card/90 text-text-primary font-caption text-caption shadow-sm flex items-center gap-1.5 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-status-good animate-pulse"></span>
+          Sentinel-2 L2A • Покрытие 100%
+        </span>
+<span class="px-2 py-1 rounded bg-surface-card/90 text-text-muted font-caption text-caption shadow-sm backdrop-blur-sm">
+          Облачность: 4.2%
+        </span>
+</div>
+<!-- Zoom & Basemap Tools -->
+<div class="flex items-center gap-1 bg-surface-card/90 p-1 rounded-lg shadow-sm pointer-events-auto backdrop-blur-sm">
+<button class="w-7 h-7 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-sunken rounded" title="Приблизить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-sunken rounded" title="Отдалить" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="w-[1px] h-4 bg-border-hairline mx-0.5"></div>
+<button class="w-7 h-7 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-sunken rounded" title="Центрировать" type="button">
+<span class="material-symbols-outlined text-[18px]">crop_free</span>
+</button>
+</div>
+</div>
+<!-- Map Bottom Metadata / Scale HUD -->
+<div class="relative z-10 flex items-center justify-between p-space-3 pointer-events-none">
+<div class="flex items-center gap-space-2 pointer-events-auto bg-surface-card/90 px-2.5 py-1 rounded shadow-sm text-text-muted font-caption text-caption">
+<span class="material-symbols-outlined text-[15px] text-text-secondary">explore</span>
+<span>45°08′32″ N, 41°58′14″ E</span>
+</div>
+<div class="flex items-center gap-2 pointer-events-auto bg-surface-card/90 px-2.5 py-1 rounded shadow-sm text-text-muted font-caption text-caption">
+<span>Масштаб: 1 : 25 000</span>
+<div class="flex items-center gap-1">
+<div class="w-12 h-1 bg-text-primary rounded-full"></div>
+<span class="font-mono text-[10px]">500 м</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Block 2: Chart Card (Title, chips, 320px chart plot area, legend) -->
+<div class="bg-surface-card rounded-lg p-space-4 shadow-sm flex flex-col gap-space-3">
+<!-- Header with Title & Active Comparison Chips -->
+<div class="flex flex-wrap items-center justify-between gap-space-3 pb-space-2">
+<div class="flex flex-wrap items-center gap-space-3">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Сравнение полей</h2>
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-text-secondary font-caption text-caption">Сезон 2024</span>
+</div>
+<!-- Removable Field Chips -->
+<div class="flex flex-wrap items-center gap-space-2">
+<!-- Chip 1: Blue -->
+<div class="inline-flex items-center gap-2 h-7 pl-2.5 pr-1.5 bg-surface-sunken hover:bg-surface-container rounded-full text-small font-small text-text-primary transition-colors" id="chip-blue">
+<span class="w-2.5 h-2.5 rounded-full bg-sensor-s2 shrink-0"></span>
+<span class="font-medium">Поле №3 у Аксая</span>
+<button class="w-4 h-4 rounded-full flex items-center justify-center text-text-muted hover:text-text-primary" onclick="document.getElementById('chip-blue').style.display='none'" title="Удалить из сравнения" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+<!-- Chip 2: Orange -->
+<div class="inline-flex items-center gap-2 h-7 pl-2.5 pr-1.5 bg-surface-sunken hover:bg-surface-container rounded-full text-small font-small text-text-primary transition-colors" id="chip-orange">
+<span class="w-2.5 h-2.5 rounded-full bg-sensor-landsat shrink-0"></span>
+<span class="font-medium">Северное</span>
+<button class="w-4 h-4 rounded-full flex items-center justify-center text-text-muted hover:text-text-primary" onclick="document.getElementById('chip-orange').style.display='none'" title="Удалить из сравнения" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+<!-- Chip 3: Green -->
+<div class="inline-flex items-center gap-2 h-7 pl-2.5 pr-1.5 bg-surface-sunken hover:bg-surface-container rounded-full text-small font-small text-text-primary transition-colors" id="chip-green">
+<span class="w-2.5 h-2.5 rounded-full bg-sensor-modis shrink-0"></span>
+<span class="font-medium">Контур OSM way/123456</span>
+<button class="w-4 h-4 rounded-full flex items-center justify-center text-text-muted hover:text-text-primary" onclick="document.getElementById('chip-green').style.display='none'" title="Удалить из сравнения" type="button">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Chart Actions -->
+<div class="flex items-center gap-1.5 text-text-muted font-caption text-caption">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-sensor-s2">sync</span>
+          Аппроксимация Савицкого-Голея (SG)
+        </span>
+</div>
+</div>
+<!-- Plot Area (Height: 320px exactly) -->
+<div class="relative w-full h-[320px] bg-surface-sunken rounded-lg p-space-3 overflow-hidden select-none">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 290">
+<defs>
+<!-- Subtle Glows for Interactive Inspection -->
+<lineargradient id="grid-fade" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#e1e0d9" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#e1e0d9" stop-opacity="0.3"></stop>
+</lineargradient>
+</defs>
+<!-- Y Axis Gridlines and Labels (0.0 to 1.0, step 0.2) -->
+<!-- Y-bounds: Top y=20 (NDVI 1.0), Bottom y=260 (NDVI 0.0). Step = 48px -->
+<!-- Y = 1.0 -->
+<g class="text-text-muted">
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="980" y1="20" y2="20"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="24">1.0</text>
+</g>
+<!-- Y = 0.8 -->
+<g>
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="980" y1="68" y2="68"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="72">0.8</text>
+</g>
+<!-- Y = 0.6 -->
+<g>
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="980" y1="116" y2="116"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="120">0.6</text>
+</g>
+<!-- Y = 0.4 -->
+<g>
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="980" y1="164" y2="164"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="168">0.4</text>
+</g>
+<!-- Y = 0.2 -->
+<g>
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="980" y1="212" y2="212"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="216">0.2</text>
+</g>
+<!-- Y = 0.0 -->
+<g>
+<line stroke="#c9c6c2" stroke-width="1.2" x1="45" x2="980" y1="260" y2="260"></line>
+<text class="fill-text-muted text-[11px] font-caption font-mono" text-anchor="end" x="36" y="264">0.0</text>
+</g>
+<!-- Vertical Month Gridlines (апр, май, июн, июл, авг, сен, окт) -->
+<!-- X positions: Apr=85, May=235, Jun=385, Jul=535, Aug=685, Sep=835, Oct=955 -->
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="85" x2="85" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="85" y="280">апр</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="235" x2="235" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="235" y="280">май</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="385" x2="385" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="385" y="280">июн</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="535" x2="535" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="535" y="280">июл</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="685" x2="685" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="685" y="280">авг</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="835" x2="835" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="835" y="280">сен</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="955" x2="955" y1="20" y2="260"></line>
+<text class="fill-text-secondary text-[12px] font-body" text-anchor="middle" x="955" y="280">окт</text>
+<!-- Vertical Guideline for Current Phenology Peak in June -->
+<line stroke="#2a78d6" stroke-dasharray="2 2" stroke-opacity="0.35" stroke-width="1" x1="385" x2="385" y1="20" y2="260"></line>
+<!-- 4. Climatology / District Average line: Thin gray dashed line -->
+<!-- Formula: y = 260 - (NDVI * 240) -->
+<!-- Starts ~0.24 (y=202), peaks in mid-June ~0.64 (y=106), dips to ~0.42 (y=159), falls to 0.28 (y=193) -->
+<path d="M 85 204 C 180 185, 290 125, 385 110 C 470 98, 535 155, 685 160 C 800 164, 880 188, 955 198" fill="none" stroke="#898781" stroke-dasharray="5 4" stroke-width="1.6"></path>
+<!-- 3. Green line #1baf7a (Контур OSM way/123456):
+             Peaks in June at 0.72 (y = 260 - 0.72*240 = 87.2), 
+             gentle dip to 0.52 (y = 260 - 0.52*240 = 135.2) in July/Aug, finishes ~0.38 (y=168.8) -->
+<path d="M 85 216 C 180 190, 270 102, 385 87 C 460 76, 535 130, 685 135 C 780 139, 875 160, 955 174" fill="none" stroke="#1baf7a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path>
+<!-- 2. Orange line #eb6834 (Северное):
+             Peaks in June at 0.78 (y = 260 - 0.78*240 = 72.8),
+             dips gently to 0.58 (y = 260 - 0.58*240 = 120.8), stays higher through autumn -->
+<path d="M 85 198 C 175 165, 275 82, 385 73 C 465 66, 535 116, 685 121 C 785 125, 875 136, 955 146" fill="none" stroke="#eb6834" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path>
+<!-- 1. Blue line #2a78d6 (Поле №3 у Аксая):
+             Peaks in June at 0.75 (y = 260 - 0.75*240 = 80),
+             dips sharply in July to 0.35 (y = 260 - 0.35*240 = 176),
+             rises to 0.50 (y = 260 - 0.50*240 = 140) around August/Sept -->
+<path d="M 85 210 C 180 180, 280 94, 385 80 C 445 72, 495 168, 535 176 C 585 186, 640 142, 720 140 C 795 138, 880 156, 955 182" fill="none" stroke="#2a78d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Peak Inspection Indicator Marker on Blue curve (June = 0.75) -->
+<circle cx="385" cy="80" fill="#2a78d6" r="4" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="535" cy="176" fill="#2a78d6" r="4" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Peak marker on Orange (June = 0.78) -->
+<circle cx="385" cy="73" fill="#eb6834" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+</svg>
+</div>
+<!-- Chart Legend (Below Plot) -->
+<div class="flex flex-wrap items-center justify-between pt-space-2 px-space-2">
+<div class="flex flex-wrap items-center gap-space-6">
+<!-- Legend Item 1: Blue -->
+<div class="flex items-center gap-2">
+<span class="w-4 h-[3px] rounded-full bg-sensor-s2"></span>
+<span class="font-body-medium text-small text-text-primary">Поле №3 у Аксая</span>
+<span class="font-caption text-caption text-text-muted">(озимая пшеница)</span>
+</div>
+<!-- Legend Item 2: Orange -->
+<div class="flex items-center gap-2">
+<span class="w-4 h-[3px] rounded-full bg-sensor-landsat"></span>
+<span class="font-body-medium text-small text-text-primary">Северное</span>
+<span class="font-caption text-caption text-text-muted">(подсолнечник)</span>
+</div>
+<!-- Legend Item 3: Green -->
+<div class="flex items-center gap-2">
+<span class="w-4 h-[3px] rounded-full bg-sensor-modis"></span>
+<span class="font-body-medium text-small text-text-primary">Контур OSM way/123456</span>
+<span class="font-caption text-caption text-text-muted">(кукуруза на зерно)</span>
+</div>
+<!-- Legend Item 4: Climatology -->
+<div class="flex items-center gap-2">
+<span class="w-4 h-[2px] border-b-2 border-dashed border-text-muted"></span>
+<span class="font-body text-small text-text-secondary">Среднее по району</span>
+<span class="font-caption text-caption text-text-muted">(норма 2014–2023)</span>
+</div>
+</div>
+<!-- Quick Index Math Callout -->
+<div class="flex items-center gap-1 font-caption text-caption text-text-muted">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Шаг съёмки: 5 дн.</span>
+</div>
+</div>
+</div>
+<!-- Block 3: KPI Summary Comparison Row (3 Comparison Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4">
+<!-- Card 1: Field Area -->
+<div class="bg-surface-card rounded-lg p-space-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-caption text-caption uppercase tracking-wider text-text-muted">Площадь контуров</span>
+<span class="w-7 h-7 rounded bg-surface-sunken flex items-center justify-center text-text-secondary">
+<span class="material-symbols-outlined text-[18px]">aspect_ratio</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mb-space-4">
+<span class="font-kpi-number text-kpi-number text-text-primary">456,2</span>
+<span class="font-body text-body text-text-muted">га суммарно</span>
+</div>
+<!-- Comparative Sub-Breakdown -->
+<div class="flex flex-col gap-2 pt-space-3 bg-surface-sunken -mx-space-4 -mb-space-4 p-space-4 rounded-b-lg">
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+            Поле №3 у Аксая
+          </span>
+<span class="font-medium text-text-primary">142,4 га</span>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-landsat"></span>
+            Северное
+          </span>
+<span class="font-medium text-text-primary">218,1 га</span>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-modis"></span>
+            OSM way/123456
+          </span>
+<span class="font-medium text-text-primary">95,7 га</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Average NDVI -->
+<div class="bg-surface-card rounded-lg p-space-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-caption text-caption uppercase tracking-wider text-text-muted">Среднесезонный NDVI</span>
+<span class="w-7 h-7 rounded bg-surface-sunken flex items-center justify-center text-text-secondary">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mb-space-4">
+<span class="font-kpi-number text-kpi-number text-text-primary">0.59</span>
+<span class="inline-flex items-center text-caption font-caption text-status-good">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          +0.07 к району
+        </span>
+</div>
+<!-- Comparative Sub-Breakdown -->
+<div class="flex flex-col gap-2 pt-space-3 bg-surface-sunken -mx-space-4 -mb-space-4 p-space-4 rounded-b-lg">
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+            Поле №3 у Аксая
+          </span>
+<div class="flex items-center gap-2">
+<span class="font-medium text-text-primary">0.54</span>
+<span class="text-caption font-caption text-text-muted">(пик 0.75)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-landsat"></span>
+            Северное
+          </span>
+<div class="flex items-center gap-2">
+<span class="font-medium text-text-primary">0.64</span>
+<span class="text-caption font-caption text-status-good">(пик 0.78)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-modis"></span>
+            OSM way/123456
+          </span>
+<div class="flex items-center gap-2">
+<span class="font-medium text-text-primary">0.58</span>
+<span class="text-caption font-caption text-text-muted">(пик 0.72)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Maximum Anomaly Z-Score -->
+<div class="bg-surface-card rounded-lg p-space-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-caption text-caption uppercase tracking-wider text-text-muted">Макс. аномалия (Z-Score)</span>
+<span class="w-7 h-7 rounded bg-surface-sunken flex items-center justify-center text-status-serious">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mb-space-4">
+<span class="font-kpi-number text-kpi-number text-status-critical">-2.18σ</span>
+<span class="font-body text-body text-status-serious">Июль (укос / стресс)</span>
+</div>
+<!-- Comparative Sub-Breakdown -->
+<div class="flex flex-col gap-2 pt-space-3 bg-surface-sunken -mx-space-4 -mb-space-4 p-space-4 rounded-b-lg">
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+            Поле №3 у Аксая
+          </span>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded text-[11px] font-medium bg-error-container text-status-critical">-2.18σ</span>
+<span class="text-caption font-caption text-text-muted">14 июл</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-landsat"></span>
+            Северное
+          </span>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded text-[11px] font-medium bg-brand-weak text-sensor-s2">+0.42σ</span>
+<span class="text-caption font-caption text-text-muted">Норма</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-small font-small">
+<span class="flex items-center gap-2 text-text-secondary">
+<span class="w-2 h-2 rounded-full bg-sensor-modis"></span>
+            OSM way/123456
+          </span>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded text-[11px] font-medium bg-surface-card text-text-secondary">-0.31σ</span>
+<span class="text-caption font-caption text-text-muted">Норма</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic update script to populate the static sidebar shell with comparison state
+  document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.querySelector("aside");
+    if (!sidebar) return;
+
+    // Locate or verify the tools section
+    const navBlock = sidebar.querySelector("div.p-space-3");
+    if (!navBlock) return;
+
+    // Check if the polygon section already exists
+    if (!document.getElementById("sidebar-polygons-block")) {
+      const polygonSection = document.createElement("div");
+      polygonSection.id = "sidebar-polygons-block";
+      polygonSection.className = "mt-space-4 pt-space-3 border-t border-border-hairline";
+      polygonSection.innerHTML = `
+        <div class="flex items-center justify-between px-space-3 py-space-1 mb-1">
+          <span class="font-caption text-caption text-text-muted uppercase tracking-wider">Мои полигоны (3)</span>
+          <span class="font-caption text-caption text-sensor-s2 font-medium cursor-pointer hover:underline">Выбрать все</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <!-- Field 1: Blue -->
+          <div class="flex items-center justify-between px-space-3 py-2 rounded-lg bg-brand-weak/30 transition-colors">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-4 h-4 rounded bg-sensor-s2 text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[13px]">check</span>
+              </span>
+              <span class="w-2 h-2 rounded-full bg-sensor-s2 shrink-0"></span>
+              <span class="font-small text-small text-text-primary truncate">Поле №3 у Аксая</span>
+            </div>
+            <span class="text-caption font-caption text-text-muted font-mono shrink-0 ml-1">142 га</span>
+          </div>
+
+          <!-- Field 2: Orange -->
+          <div class="flex items-center justify-between px-space-3 py-2 rounded-lg bg-surface-sunken/60 transition-colors">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-4 h-4 rounded bg-sensor-landsat text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[13px]">check</span>
+              </span>
+              <span class="w-2 h-2 rounded-full bg-sensor-landsat shrink-0"></span>
+              <span class="font-small text-small text-text-primary truncate">Северное</span>
+            </div>
+            <span class="text-caption font-caption text-text-muted font-mono shrink-0 ml-1">218 га</span>
+          </div>
+
+          <!-- Field 3: Green -->
+          <div class="flex items-center justify-between px-space-3 py-2 rounded-lg bg-surface-sunken/60 transition-colors">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-4 h-4 rounded bg-sensor-modis text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[13px]">check</span>
+              </span>
+              <span class="w-2 h-2 rounded-full bg-sensor-modis shrink-0"></span>
+              <span class="font-small text-small text-text-primary truncate">Контур OSM way/123456</span>
+            </div>
+            <span class="text-caption font-caption text-text-muted font-mono shrink-0 ml-1">96 га</span>
+          </div>
+        </div>
+      `;
+      navBlock.appendChild(polygonSection);
+    }
+
+    // Set active link visually on "Мониторинг полей" or "Спектральные индексы"
+    const navLinks = sidebar.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+      if (link.getAttribute("data-path") === "spectral-indices") {
+        link.className = "flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg bg-brand-weak text-sensor-s2 font-medium font-body-medium text-body-medium";
+      }
+    });
+  });
+</script></main></div></body></html>

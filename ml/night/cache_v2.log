@@ -1,0 +1,4 @@
+new_polygon_fold0: обучение 47781, валидация 1914, 95s -> cache_v2/new_polygon_fold0.pkl
+new_polygon_fold1: обучение 48042, валидация 1885, 101s -> cache_v2/new_polygon_fold1.pkl
+new_polygon_fold2: обучение 47223, валидация 1976, 95s -> cache_v2/new_polygon_fold2.pkl
+new_polygon_fold3: обучение 51984, валидация 1447, 104s -> cache_v2/new_polygon_fold3.pkl

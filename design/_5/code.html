@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full">
+<div class="flex flex-col lg:flex-row gap-space-4 w-full">
+<!-- Sub-panel: Filters & Imagery Scene Catalog -->
+<section class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-space-3">
+<!-- Polygon Header Card -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Каталог снимков</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-caption font-caption bg-surface-sunken text-sensor-s2">L2A Ortho</span>
+</div>
+<div>
+<h1 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Спутниковые снимки</h1>
+<p class="font-small text-small text-text-secondary mt-1">Ортотрансформированные гранулы BOA</p>
+</div>
+<div class="flex items-center gap-space-2 bg-surface-sunken p-space-2 rounded-lg">
+<span class="material-symbols-outlined text-sensor-s2 text-[18px]">polyline</span>
+<div class="min-w-0 flex-1">
+<div class="font-body-medium text-body-medium text-text-primary truncate">Поле №3 у Аксая</div>
+<div class="font-caption text-caption text-text-muted">Площадь контура: 96,2 га</div>
+</div>
+<span class="font-caption text-caption text-text-secondary bg-surface-card px-1.5 py-0.5 rounded">ID: 8421</span>
+</div>
+</div>
+<!-- Filters Pane -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary">Параметры фильтра</span>
+<button class="font-caption text-caption text-sensor-s2 hover:underline">Сбросить</button>
+</div>
+<!-- Sensors -->
+<div class="flex flex-col gap-space-1">
+<span class="font-caption text-caption text-text-muted">Сенсоры и группировки</span>
+<div class="flex flex-col gap-1.5 mt-1">
+<label class="flex items-center justify-between bg-surface-sunken px-space-3 py-1.5 rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-2">
+<input checked="" class="w-4 h-4 rounded text-sensor-s2 accent-sensor-s2 bg-surface-card cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-primary">Sentinel-2 MSI</span>
+</div>
+<span class="font-caption text-caption text-sensor-s2 font-medium">10 м</span>
+</label>
+<label class="flex items-center justify-between bg-surface-sunken px-space-3 py-1.5 rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-2">
+<input checked="" class="w-4 h-4 rounded text-sensor-landsat accent-sensor-landsat bg-surface-card cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-primary">Landsat 8/9 OLI</span>
+</div>
+<span class="font-caption text-caption text-sensor-landsat font-medium">30 м</span>
+</label>
+<label class="flex items-center justify-between bg-surface-sunken px-space-3 py-1.5 rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors opacity-70">
+<div class="flex items-center gap-space-2">
+<input class="w-4 h-4 rounded text-sensor-modis accent-sensor-modis bg-surface-card cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-secondary">MODIS Terra/Aqua</span>
+</div>
+<span class="font-caption text-caption text-text-muted">250 м</span>
+</label>
+</div>
+</div>
+<!-- Cloud Cover & Date Range Controls -->
+<div class="grid grid-cols-2 gap-space-2 pt-1">
+<div class="flex flex-col gap-1">
+<span class="font-caption text-caption text-text-muted">Облачность</span>
+<div class="h-8 bg-surface-sunken rounded-lg px-2.5 flex items-center justify-between">
+<span class="font-small text-small text-text-primary">До 10%</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">cloud</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-caption text-caption text-text-muted">Интервал</span>
+<div class="h-8 bg-surface-sunken rounded-lg px-2.5 flex items-center justify-between">
+<span class="font-small text-small text-text-primary">Июль 2025</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">calendar_today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scenes List -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-3 text-headline-3 text-text-primary">Доступные пролёты</span>
+<span class="font-caption text-caption text-text-muted">4 сцены</span>
+</div>
+<div class="flex flex-col gap-space-2">
+<!-- Scene 1: Selected -->
+<article class="p-space-3 rounded-lg bg-brand-weak/60 shadow-sm flex flex-col gap-1.5 cursor-pointer relative overflow-hidden transition-all hover:shadow-md">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-sensor-s2"></div>
+<div class="flex items-center justify-between pl-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+<span class="font-body-medium text-body-medium text-text-primary">Sentinel-2B</span>
+</div>
+<span class="font-caption text-caption text-sensor-s2 font-medium">Выбрано</span>
+</div>
+<div class="pl-1 flex items-baseline justify-between">
+<span class="font-small text-small text-text-primary font-medium">14 июля 2025, 11:24 MSK</span>
+<span class="font-caption text-caption text-status-good">0% облачн.</span>
+</div>
+<div class="pl-1 flex items-center gap-2 font-caption text-caption text-text-secondary pt-0.5">
+<span>Угол: 4.1°</span>
+<span>•</span>
+<span>L2A BOA SR</span>
+<span>•</span>
+<span class="text-text-muted">T37UDS</span>
+</div>
+</article>
+<!-- Scene 2: Landsat -->
+<article class="p-space-3 rounded-lg bg-surface-sunken hover:bg-surface-container-high transition-colors flex flex-col gap-1.5 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-sensor-landsat"></span>
+<span class="font-body-medium text-body-medium text-text-primary">Landsat-9 OLI</span>
+</div>
+<span class="font-caption text-caption text-text-muted">10:48 MSK</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-small text-small text-text-primary">11 июля 2025</span>
+<span class="font-caption text-caption text-status-good">2% облачн.</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-text-secondary">
+<span>Band 4-3-2 RGB</span>
+<span>•</span>
+<span>Tier 1 Surface</span>
+</div>
+</article>
+<!-- Scene 3 -->
+<article class="p-space-3 rounded-lg bg-surface-sunken hover:bg-surface-container-high transition-colors flex flex-col gap-1.5 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+<span class="font-body-medium text-body-medium text-text-primary">Sentinel-2A</span>
+</div>
+<span class="font-caption text-caption text-text-muted">11:32 MSK</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-small text-small text-text-primary">09 июля 2025</span>
+<span class="font-caption text-caption text-status-warning">7% облачн.</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-text-secondary">
+<span>Угол: 5.8°</span>
+<span>•</span>
+<span>L2A BOA</span>
+</div>
+</article>
+<!-- Scene 4 -->
+<article class="p-space-3 rounded-lg bg-surface-sunken hover:bg-surface-container-high transition-colors flex flex-col gap-1.5 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+<span class="font-body-medium text-body-medium text-text-primary">Sentinel-2B</span>
+</div>
+<span class="font-caption text-caption text-text-muted">11:21 MSK</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-small text-small text-text-primary">04 июля 2025</span>
+<span class="font-caption text-caption text-status-good">1% облачн.</span>
+</div>
+<div class="flex items-center gap-2 font-caption text-caption text-text-secondary">
+<span>Эталон до засухи</span>
+<span>•</span>
+<span>L2A BOA</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Main Workspace Area -->
+<main class="flex-1 flex flex-col gap-space-3 min-w-0">
+<!-- Toolbar & Composite Synthesizer Selector -->
+<section class="bg-surface-card rounded-xl p-space-3 shadow-sm flex flex-wrap items-center justify-between gap-space-3">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-caption text-caption text-text-muted mr-1 hidden sm:inline">Синтез каналов:</span>
+<button class="composite-btn px-space-3 py-1.5 rounded-lg text-small font-body-medium bg-brand-weak text-sensor-s2 shadow-sm transition-all" id="btn-rgb">
+            Естественные (RGB 4-3-2)
+          </button>
+<button class="composite-btn px-space-3 py-1.5 rounded-lg text-small font-body-medium bg-surface-sunken text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-all" id="btn-nir">
+            NIR Color (8-4-3)
+          </button>
+<button class="composite-btn px-space-3 py-1.5 rounded-lg text-small font-body-medium bg-surface-sunken text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-all" id="btn-ndvi">
+            NDVI Градиент
+          </button>
+<button class="composite-btn px-space-3 py-1.5 rounded-lg text-small font-body-medium bg-surface-sunken text-text-secondary hover:text-text-primary hover:bg-surface-container-high transition-all" id="btn-swir">
+            Влагонасыщенность (SWIR)
+          </button>
+</div>
+<div class="flex items-center gap-space-2">
+<!-- Split-view Mode Toggle -->
+<div class="flex items-center gap-1.5 bg-surface-sunken px-space-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-text-muted text-[18px]">compare</span>
+<label class="font-caption text-caption text-text-primary flex items-center gap-1 cursor-pointer select-none">
+<span>Сплит до/после</span>
+<input checked="" class="rounded text-sensor-s2 accent-sensor-s2 cursor-pointer ml-1" id="split-mode-toggle" type="checkbox"/>
+</label>
+</div>
+<!-- Scale & Resolution Dropdown -->
+<div class="bg-surface-sunken px-space-2 py-1 rounded-lg flex items-center gap-1 font-caption text-caption text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-text-muted">zoom_in</span>
+<span>1:10 000 (10м/px)</span>
+</div>
+<!-- Export Action -->
+<button class="bg-sensor-s2 hover:bg-primary text-on-primary px-space-3 py-1.5 rounded-lg font-small text-small font-medium flex items-center gap-1.5 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Скачать GeoTIFF</span>
+</button>
+</div>
+</section>
+<!-- Main Visual Viewport with Split Comparison & Layer Overlays -->
+<section class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-3 relative overflow-hidden">
+<!-- Interactive Split Canvas Container -->
+<div class="relative w-full h-[520px] rounded-xl bg-surface-sunken overflow-hidden select-none" id="viewport-canvas">
+<!-- Baseline Layer (Right / Recent / 14 July 2025) -->
+<div class="absolute inset-0 w-full h-full">
+<div class="w-full h-full bg-cover bg-center" data-alt="Satellite earth observation orthophoto high resolution view of agricultural wheat field parcel in Stavropol region Russia showing dry hot summer vegetation stress patches and irrigation canals from Sentinel-2 satellite top-down perspective" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpkWOHl6coTL_S-wTp83OO183SUzjPRjuvptjFHGW8Ld5v0VHj5VUc-9p9K_eabjSq1hGooGXouUt45Oz0xwRQJw0bA7yBLrpaQlxxPo1HWJszz2W98Lb1zzHJPjLs0OyIFf5G5GLyOy13aoEBz4j0lSHkXuTKYlO19pGVuL1v3xk3YZNhOrnZmG09CyklrsCId8lsunc85bjLKZ5w4db_sFL6CBGhmK0T3f4DOw2u8NBRL4-phF6AOg')">
+</div>
+<!-- Raster Reflectance Heatmap Visual Overlay -->
+<div class="absolute inset-0 bg-gradient-to-tr from-amber-700/20 via-transparent to-emerald-600/10 pointer-events-none mix-blend-multiply"></div>
+</div>
+<!-- Comparative Split Layer (Left / Reference / 04 July 2025) -->
+<div class="absolute inset-y-0 left-0 overflow-hidden" id="split-layer-container" style="width: 52%;">
+<div class="w-[1100px] h-[520px] max-w-none relative bg-cover bg-center" data-alt="Sentinel-2 high-res multispectral satellite orthoimage of lush green healthy agricultural field polygon parcel before drought with vivid vegetative canopy chlorophyll reflectance and crisp field borders" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCk6idSlEuOM37pIU21nuOYkN5wLfj09pzdlbSFVdz3vAdEoRQ_RkfEnTAtAKMxii2VDrMSjAB17nngYq2JGhjwta88L8mbzGYSr7BZ1VuDGVdTLowzqN21AbVWQQTE3KKv2O9a4XwHd93rcWjdj1mH3l3YgZhsV8ExjV6J_M2IwNW9N4rE7_A4vHEp4_HTOwJQL9s9_5YwgAFMw1M-KwCRndy62tx-5_X2aYtm5w51vCFE7w5EcwYN2w')">
+<div class="absolute inset-0 bg-emerald-900/15 pointer-events-none mix-blend-multiply"></div>
+</div>
+<!-- Split label for Left -->
+<div class="absolute top-space-3 left-space-3 bg-surface-card/90 backdrop-blur-sm px-2.5 py-1.5 rounded-lg shadow-sm flex flex-col pointer-events-none">
+<span class="font-caption text-caption text-text-muted">Базовая сцена (До засухи)</span>
+<span class="font-body-medium text-body-medium text-text-primary">04 июля 2025 · Sentinel-2B</span>
+</div>
+</div>
+<!-- Split label for Right -->
+<div class="absolute top-space-3 right-space-3 bg-surface-card/90 backdrop-blur-sm px-2.5 py-1.5 rounded-lg shadow-sm flex flex-col text-right pointer-events-none">
+<span class="font-caption text-caption text-text-muted">Текущая сцена (Пик стресса)</span>
+<span class="font-body-medium text-body-medium text-text-primary">14 июля 2025 · Sentinel-2B</span>
+</div>
+<!-- Interactive Divider Handle -->
+<div class="absolute inset-y-0 w-1 bg-white cursor-ew-resize flex items-center justify-center shadow-lg" id="split-divider" style="left: 52%;">
+<div class="w-7 h-7 rounded-full bg-surface-card text-text-primary shadow-md flex items-center justify-center -ml-3">
+<span class="material-symbols-outlined text-[16px]">code_blocks</span>
+</div>
+</div>
+<!-- Polygon CAD Boundary Overlay (SVG Vector Trace) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 1000 600">
+<!-- Outer Field Polygon Outline with Vertex Dots -->
+<polygon fill="rgba(42, 120, 214, 0.08)" points="180,90 740,65 890,440 680,510 240,480" stroke="#2a78d6" stroke-dasharray="6 4" stroke-width="2"></polygon>
+<circle cx="180" cy="90" fill="#ffffff" r="4" stroke="#2a78d6" stroke-width="2"></circle>
+<circle cx="740" cy="65" fill="#ffffff" r="4" stroke="#2a78d6" stroke-width="2"></circle>
+<circle cx="890" cy="440" fill="#ffffff" r="4" stroke="#2a78d6" stroke-width="2"></circle>
+<circle cx="680" cy="510" fill="#ffffff" r="4" stroke="#2a78d6" stroke-width="2"></circle>
+<circle cx="240" cy="480" fill="#ffffff" r="4" stroke="#2a78d6" stroke-width="2"></circle>
+<!-- Target Hotspot Pin inside Stress Zone -->
+<g transform="translate(620, 260)">
+<circle cx="0" cy="0" fill="rgba(235, 104, 52, 0.35)" r="8"></circle>
+<circle cx="0" cy="0" fill="#eb6834" r="4"></circle>
+<line stroke="#eb6834" stroke-width="1.5" x1="0" x2="35" y1="0" y2="-30"></line>
+<rect fill="rgba(252, 252, 251, 0.95)" height="26" rx="4" stroke="rgba(11, 11, 11, 0.10)" width="130" x="35" y="-45"></rect>
+<text fill="#0b0b0b" font-family="Geist" font-size="11" font-weight="600" x="43" y="-28">Очаг депрессии NDVI -0.22</text>
+</g>
+</svg>
+<!-- Floating Inspector Metadata Card -->
+<div class="absolute bottom-space-4 left-space-4 bg-surface-card/95 backdrop-blur-md rounded-lg p-space-3 shadow-md max-w-xs flex flex-col gap-1.5 border-hairline">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Телеметрия гранулы</span>
+<span class="font-caption text-caption font-medium text-sensor-s2">BOA SR</span>
+</div>
+<div class="grid grid-cols-2 gap-x-space-3 gap-y-1 font-caption text-caption pt-0.5">
+<div>
+<span class="text-text-muted block">Tile ID:</span>
+<span class="font-body-medium text-text-primary">T37UDS</span>
+</div>
+<div>
+<span class="text-text-muted block">Зенит солнца:</span>
+<span class="font-body-medium text-text-primary">64.2°</span>
+</div>
+<div>
+<span class="text-text-muted block">Сенсор:</span>
+<span class="font-body-medium text-text-primary">MSI (MultiSpectral)</span>
+</div>
+<div>
+<span class="text-text-muted block">Азимут солнца:</span>
+<span class="font-body-medium text-text-primary">143.8°</span>
+</div>
+</div>
+<div class="border-t border-border-hairline pt-1 text-caption font-caption text-text-secondary">
+              Калибровка: Level-2A Bottom-Of-Atmosphere reflectance с коррекцией Sen2Cor v2.11
+            </div>
+</div>
+<!-- On-screen Map Navigational Controls -->
+<div class="absolute bottom-space-4 right-space-4 flex flex-col gap-1 bg-surface-card/90 backdrop-blur-sm rounded-lg p-1 shadow-md">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-sunken rounded text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<div class="h-px bg-border-hairline w-5 mx-auto"></div>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-sunken rounded text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="h-px bg-border-hairline w-5 mx-auto"></div>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-surface-sunken rounded text-text-primary transition-colors" title="Сбросить ориентацию">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+</button>
+</div>
+</div>
+<!-- Band Spectrogram & Pixel Distribution Quick Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-3 pt-1">
+<div class="bg-surface-sunken p-space-2 rounded-lg flex flex-col">
+<span class="font-caption text-caption text-text-muted">B4 (Красный 665 нм)</span>
+<span class="font-body-medium text-body-medium text-text-primary font-medium">0.084 ρ</span>
+<div class="w-full bg-border-hairline h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-sensor-landsat h-full rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex flex-col">
+<span class="font-caption text-caption text-text-muted">B8 (NIR 842 нм)</span>
+<span class="font-body-medium text-body-medium text-text-primary font-medium">0.428 ρ</span>
+<div class="w-full bg-border-hairline h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-status-good h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex flex-col">
+<span class="font-caption text-caption text-text-muted">B11 (SWIR 1610 нм)</span>
+<span class="font-body-medium text-body-medium text-text-primary font-medium">0.192 ρ</span>
+<div class="w-full bg-border-hairline h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-sensor-s2 h-full rounded-full" style="width: 54%;"></div>
+</div>
+</div>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex flex-col">
+<span class="font-caption text-caption text-text-muted">Средневзвешенный NDVI</span>
+<span class="font-body-medium text-body-medium text-status-serious font-semibold">0.67 (-0.11 за 10 дн)</span>
+<div class="w-full bg-border-hairline h-1 rounded-full mt-1 overflow-hidden">
+<div class="bg-status-serious h-full rounded-full" style="width: 67%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Validation & Status Strip -->
+<footer class="bg-surface-card rounded-xl px-space-4 py-space-3 shadow-sm flex flex-wrap items-center justify-between gap-space-3">
+<div class="flex flex-wrap items-center gap-space-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-good text-[20px]">verified</span>
+<span class="font-small text-small text-text-primary">100% покрытие контура</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-good text-[20px]">wb_sunny</span>
+<span class="font-small text-small text-text-primary">0 артефактов тени облаков</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sensor-s2 text-[20px]">rule</span>
+<span class="font-small text-small text-text-primary">Валидировано по алгоритму SCL (Scene Classification Layer)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2 text-text-muted font-caption text-caption">
+<span class="w-2 h-2 rounded-full bg-status-good"></span>
+<span>SR-L2A Ingestion: OK</span>
+<span>•</span>
+<span>EPSG: 32637 (WGS 84 / UTM zone 37N)</span>
+</div>
+</footer>
+</main>
+</div>
+<!-- Interactive Scripts for Slider & UI Toggles -->
+<script>
+    (function() {
+      // Split view drag slider logic
+      const container = document.getElementById('viewport-canvas');
+      const splitLayer = document.getElementById('split-layer-container');
+      const divider = document.getElementById('split-divider');
+      const toggle = document.getElementById('split-mode-toggle');
+      let isDragging = false;
+
+      function updateSliderPosition(clientX) {
+        if (!container || !splitLayer || !divider) return;
+        const rect = container.getBoundingClientRect();
+        let offsetX = clientX - rect.left;
+        if (offsetX < 40) offsetX = 40;
+        if (offsetX > rect.width - 40) offsetX = rect.width - 40;
+        const percent = (offsetX / rect.width) * 100;
+        splitLayer.style.width = percent + '%';
+        divider.style.left = percent + '%';
+      }
+
+      if (divider && container) {
+        divider.addEventListener('mousedown', function(e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', function(e) {
+          if (!isDragging) return;
+          updateSliderPosition(e.clientX);
+        });
+
+        window.addEventListener('mouseup', function() {
+          isDragging = false;
+        });
+
+        // Touch support
+        divider.addEventListener('touchstart', function(e) {
+          isDragging = true;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', function(e) {
+          if (!isDragging || !e.touches[0]) return;
+          updateSliderPosition(e.touches[0].clientX);
+        }, { passive: true });
+
+        window.addEventListener('touchend', function() {
+          isDragging = false;
+        });
+      }
+
+      // Toggle split mode
+      if (toggle && splitLayer && divider) {
+        toggle.addEventListener('change', function() {
+          if (this.checked) {
+            splitLayer.style.display = 'block';
+            divider.style.display = 'flex';
+          } else {
+            splitLayer.style.display = 'none';
+            divider.style.display = 'none';
+          }
+        });
+      }
+
+      // Presets switch tabs highlight
+      const buttons = document.querySelectorAll('.composite-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          buttons.forEach(b => {
+            b.classList.remove('bg-brand-weak', 'text-sensor-s2');
+            b.classList.add('bg-surface-sunken', 'text-text-secondary');
+          });
+          this.classList.remove('bg-surface-sunken', 'text-text-secondary');
+          this.classList.add('bg-brand-weak', 'text-sensor-s2');
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

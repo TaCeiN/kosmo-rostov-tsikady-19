@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full gap-space-4">
+<script>
+    (function highlightActiveNav() {
+      const activeLink = document.querySelector('aside nav a[data-path="spectral-indices"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-text-secondary', 'hover:bg-surface-sunken');
+        activeLink.classList.add('bg-brand-weak', 'text-sensor-s2', 'font-medium');
+        const icon = activeLink.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('text-sensor-s2');
+      }
+    })();
+  </script>
+<div class="flex flex-col xl:flex-row gap-space-4 items-start">
+<section class="w-full xl:w-[320px] flex-shrink-0 flex flex-col gap-space-3 bg-surface-card p-space-4 rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-2">
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Параметры анализа</h2>
+<span class="material-symbols-outlined text-text-muted text-[20px]">tune</span>
+</div>
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col gap-space-1">
+<span class="font-caption text-caption text-text-muted uppercase font-medium tracking-wide">Контур поля</span>
+<div class="flex items-start justify-between gap-space-2 mt-1">
+<div class="flex flex-col">
+<span class="font-headline-3 text-headline-3 text-text-primary">Поле №3 у Аксая</span>
+<span class="font-small text-small text-text-secondary mt-0.5">96,2 га · озимая пшеница</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-card text-text-secondary font-caption text-caption">Кадастр: 26:12</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2">
+<span class="font-caption text-caption text-text-muted uppercase font-medium tracking-wide">Спектральный индекс</span>
+<div class="flex flex-col gap-1.5" id="index-selector-group">
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-brand-weak text-sensor-s2 cursor-pointer transition-colors" data-index="ndvi">
+<div class="flex items-center gap-space-2">
+<input checked="" class="w-4 h-4 accent-sensor-s2 cursor-pointer" name="index_mode" type="radio" value="ndvi"/>
+<span class="font-body-medium text-body-medium text-text-primary font-medium">NDVI</span>
+</div>
+<span class="font-caption text-caption text-sensor-s2">Нормализ. вегетация</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container transition-colors cursor-pointer" data-index="evi">
+<div class="flex items-center gap-space-2">
+<input class="w-4 h-4 accent-sensor-s2 cursor-pointer" name="index_mode" type="radio" value="evi"/>
+<span class="font-body-medium text-body-medium text-text-primary">EVI</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Улучш. вегетация</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container transition-colors cursor-pointer" data-index="ndwi">
+<div class="flex items-center gap-space-2">
+<input class="w-4 h-4 accent-sensor-s2 cursor-pointer" name="index_mode" type="radio" value="ndwi"/>
+<span class="font-body-medium text-body-medium text-text-primary">NDWI</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Водный стресс</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container transition-colors cursor-pointer" data-index="savi">
+<div class="flex items-center gap-space-2">
+<input class="w-4 h-4 accent-sensor-s2 cursor-pointer" name="index_mode" type="radio" value="savi"/>
+<span class="font-body-medium text-body-medium text-text-primary">SAVI</span>
+</div>
+<span class="font-caption text-caption text-text-muted">С поправкой почвы</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container transition-colors cursor-pointer" data-index="ndre">
+<div class="flex items-center gap-space-2">
+<input class="w-4 h-4 accent-sensor-s2 cursor-pointer" name="index_mode" type="radio" value="ndre"/>
+<span class="font-body-medium text-body-medium text-text-primary">NDRE</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Красный край</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-space-2 pt-space-2">
+<label class="font-caption text-caption text-text-muted uppercase font-medium tracking-wide">Период мониторинга</label>
+<div class="flex items-center justify-between bg-surface-sunken px-space-3 py-2 rounded-lg text-text-primary font-small text-small">
+<span>Сезон 2025 (апр — окт)</span>
+<span class="material-symbols-outlined text-text-muted text-[18px]">calendar_today</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2 pt-space-1">
+<div class="flex items-center justify-between">
+<label class="font-caption text-caption text-text-muted uppercase font-medium tracking-wide" for="cloud-filter">Порог облачности</label>
+<span class="font-caption text-caption text-text-primary font-medium" id="cloud-val">< 15%</span>
+</div>
+<input class="w-full h-1 bg-surface-sunken rounded-lg appearance-none cursor-pointer accent-sensor-s2" id="cloud-filter" max="50" min="0" type="range" value="15"/>
+<div class="flex justify-between font-caption text-caption text-text-muted">
+<span>0% (Чисто)</span>
+<span>50% (Плотная)</span>
+</div>
+</div>
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col gap-2 mt-auto">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Калибровка сенсоров</span>
+<span class="font-caption text-caption text-status-good font-medium">MSI + OLI активны</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+<span class="font-caption text-caption text-text-secondary">Sentinel-2 (5 дн)</span>
+<span class="w-2 h-2 rounded-full bg-sensor-landsat ml-2"></span>
+<span class="font-caption text-caption text-text-secondary">Landsat-8/9 (8 дн)</span>
+</div>
+</div>
+</section>
+<div class="flex-1 flex flex-col gap-space-4 min-w-0 w-full">
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-3">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-sensor-s2"></span>
+<h1 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">NDVI / NDWI корреляция и динамика</h1>
+</div>
+<p class="font-small text-small text-text-secondary">Временной ряд спектральных профилей с выявлением зон опережающего влагодефицита</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-brand-weak text-sensor-s2 font-caption text-caption font-medium">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+            NDVI (вегетация)
+          </div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-sunken text-status-good font-caption text-caption font-medium">
+<span class="w-2 h-2 rounded-full bg-status-good"></span>
+            NDWI (влагообеспеченность)
+          </div>
+<button class="inline-flex items-center gap-1.5 bg-surface-sunken hover:bg-surface-container text-text-primary font-small text-small px-space-3 py-1.5 rounded-lg transition-colors ml-2" id="btn-export" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Экспорт данных</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-3 text-headline-3 text-text-primary">Профиль вегетационного сезона 2025</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-error-container text-status-critical font-caption text-caption font-medium">
+              Аномалия: засуха (12–28 июля)
+            </span>
+</div>
+<div class="flex items-center gap-4 text-text-muted font-caption text-caption">
+<span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-sensor-s2 inline-block"></span> NDVI</span>
+<span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-status-good inline-block"></span> NDWI</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 bg-status-critical rounded-full inline-block"></span> Точка дивергенции</span>
+</div>
+</div>
+<div class="relative w-full h-[320px] bg-surface-sunken rounded-lg p-space-3 overflow-hidden select-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 860 260">
+<defs>
+<lineargradient id="ndvi-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2a78d6" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#2a78d6" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="ndwi-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0ca30c" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#0ca30c" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<rect fill="#ffdad6" fill-opacity="0.45" height="210" rx="4" width="130" x="360" y="10"></rect>
+<text fill="#d03b3b" font-family="Geist" font-size="10" font-weight="600" x="366" y="24">Зона дефицита влаги (ИЮЛЬ)</text>
+<line stroke="#e1e0d9" stroke-width="1" x1="50" x2="840" y1="20" y2="20"></line>
+<line stroke="#e1e0d9" stroke-width="1" x1="50" x2="840" y1="65" y2="65"></line>
+<line stroke="#e1e0d9" stroke-width="1" x1="50" x2="840" y1="110" y2="110"></line>
+<line stroke="#e1e0d9" stroke-width="1" x1="50" x2="840" y1="155" y2="155"></line>
+<line stroke="#e1e0d9" stroke-width="1" x1="50" x2="840" y1="200" y2="200"></line>
+<line stroke="#52514e" stroke-width="1.2" x1="50" x2="840" y1="225" y2="225"></line>
+<text fill="#898781" font-family="Geist" font-size="11" x="12" y="24">0,90</text>
+<text fill="#898781" font-family="Geist" font-size="11" x="12" y="69">0,60</text>
+<text fill="#898781" font-family="Geist" font-size="11" x="12" y="114">0,30</text>
+<text fill="#898781" font-family="Geist" font-size="11" x="12" y="159">0,00</text>
+<text fill="#898781" font-family="Geist" font-size="11" x="8" y="204">−0,30</text>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="75" x2="75" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="195" x2="195" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="315" x2="315" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="435" x2="435" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="555" x2="555" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="675" x2="675" y1="20" y2="225"></line>
+<line stroke="#e1e0d9" stroke-dasharray="2 3" x1="795" x2="795" y1="20" y2="225"></line>
+<path d="M 75 190 Q 140 180 195 130 T 315 95 T 390 155 T 435 198 T 555 185 T 675 200 T 795 210 L 795 225 L 75 225 Z" fill="url(#ndwi-grad)"></path>
+<path d="M 75 190 Q 140 180 195 130 T 315 95 T 390 155 T 435 198 T 555 185 T 675 200 T 795 210" fill="none" stroke="#0ca30c" stroke-width="2.5"></path>
+<path d="M 75 160 Q 140 135 195 70 T 315 42 T 390 55 T 435 130 T 555 165 T 675 185 T 795 195 L 795 225 L 75 225 Z" fill="url(#ndvi-grad)"></path>
+<path d="M 75 160 Q 140 135 195 70 T 315 42 T 390 55 T 435 130 T 555 165 T 675 185 T 795 195" fill="none" stroke="#2a78d6" stroke-width="2.5"></path>
+<circle cx="75" cy="160" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="195" cy="70" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="315" cy="42" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="390" cy="55" fill="#2a78d6" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="435" cy="130" fill="#d03b3b" r="4.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="555" cy="165" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="675" cy="185" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="795" cy="195" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="72" y="187"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="192" y="127"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="312" y="92"></rect>
+<rect fill="#d03b3b" height="7" stroke="#ffffff" stroke-width="1" width="7" x="387" y="152"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="432" y="195"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="552" y="182"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="672" y="197"></rect>
+<rect fill="#0ca30c" height="6" stroke="#ffffff" stroke-width="1" width="6" x="792" y="207"></rect>
+<line stroke="#d03b3b" stroke-dasharray="3 3" stroke-width="1.5" x1="390" x2="390" y1="55" y2="155"></line>
+<text fill="#d03b3b" font-family="Geist" font-size="11" font-weight="500" x="398" y="105">Δ = −0,61 (опережение 14 дн)</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="65" y="244">01 апр</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="183" y="244">01 май</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="303" y="244">01 июн</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="423" y="244">01 июл</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="543" y="244">01 авг</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="663" y="244">01 сен</text>
+<text fill="#52514e" font-family="Geist" font-size="12" x="783" y="244">01 окт</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-text-muted font-caption text-caption px-1">
+<span>Синтез рядов Sentinel-2 MSI (L2A) и Landsat-8/9 OLI/TIRS. Облачные маски применены автоматически (SCL/QA).</span>
+<span class="text-text-secondary font-medium">Точность аппроксимации R² = 0,94</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4">
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-muted uppercase font-medium">Индекс хлорофилла (NDRE)</span>
+<span class="font-kpi-number text-kpi-number text-text-primary mt-1">0,42</span>
+</div>
+<span class="p-1.5 rounded-lg bg-surface-sunken text-sensor-landsat">
+<span class="material-symbols-outlined text-[20px]">grass</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 text-status-serious font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+<span>−1,8σ к норме фазы колошения</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">Умеренное угнетение синтеза биомассы на восточном склоне участка (22 га).</p>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-muted uppercase font-medium">Водный дефицит (NDWI)</span>
+<span class="font-kpi-number text-kpi-number text-status-critical mt-1">−0,28</span>
+</div>
+<span class="p-1.5 rounded-lg bg-error-container text-status-critical">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 text-status-critical font-caption text-caption font-medium">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Критический дефицит влаги</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">Влагозапас в пахотном слое 0–30 см ниже порога завядания культуры.</p>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-muted uppercase font-medium">Корреляция индексов</span>
+<span class="font-kpi-number text-kpi-number text-sensor-s2 mt-1">0,89</span>
+</div>
+<span class="p-1.5 rounded-lg bg-brand-weak text-sensor-s2">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 text-status-good font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Высокая согласованность MSI / OLI</span>
+</div>
+<p class="font-caption text-caption text-text-secondary">Калибровка атмосферной коррекции BOA соответствует регламенту CEOS-WGCV.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initControls() {
+    const slider = document.getElementById('cloud-filter');
+    const label = document.getElementById('cloud-val');
+    if (slider && label) {
+      slider.addEventListener('input', function(e) {
+        label.textContent = '< ' + e.target.value + '%';
+      });
+    }
+
+    const radios = document.querySelectorAll('input[name="index_mode"]');
+    radios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        radios.forEach(function(r) {
+          const parent = r.closest('label');
+          if (parent) {
+            parent.classList.remove('bg-brand-weak', 'text-sensor-s2');
+            parent.classList.add('bg-surface-sunken');
+          }
+        });
+        const current = radio.closest('label');
+        if (current) {
+          current.classList.remove('bg-surface-sunken');
+          current.classList.add('bg-brand-weak', 'text-sensor-s2');
+        }
+      });
+    });
+
+    const exportBtn = document.getElementById('btn-export');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', function() {
+        const prev = exportBtn.innerHTML;
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>CSV сформирован</span>';
+        setTimeout(function() {
+          exportBtn.innerHTML = prev;
+        }, 1800);
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full gap-space-4">
+<!-- Контекстная навигационная шапка полигона -->
+<div class="flex items-center justify-between bg-surface-card rounded-xl px-space-4 py-space-3 shadow-sm">
+<div class="flex items-center gap-space-3">
+<div class="w-3 h-3 rounded-full bg-status-critical flex-shrink-0 animate-pulse"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-2 text-headline-2 text-text-primary">Поле №3 у Аксая</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-status-critical/10 text-status-critical font-medium">Критично</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">96,2 га · озимая пшеница · Координаты центра: 47°14'18" N, 39°52'11" E</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="font-caption text-caption text-text-muted">ID: RU-STA-2025-0894</span>
+<button class="h-8 px-3 rounded-lg bg-surface-sunken hover:bg-surface-dim transition-colors flex items-center gap-1.5 text-text-primary font-small text-small" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">tune</span>
+<span>Параметры детекции</span>
+</button>
+</div>
+</div>
+<!-- Карточка с динамикой NDVI (Zoomed View) -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<h2 class="font-headline-3 text-headline-3 text-text-primary">Динамика NDVI</h2>
+<div class="flex items-center gap-space-3 text-caption font-caption text-text-muted">
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-sensor-s2"></span>
+            Sentinel-2 & Landsat
+          </span>
+<span class="flex items-center gap-1">
+<span class="w-4 h-1.5 bg-gridline rounded-sm"></span>
+            Климатическая норма (2015–2024)
+          </span>
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded bg-status-critical/20 border border-status-critical/40"></span>
+            Период депрессии
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-1 bg-surface-sunken p-0.5 rounded-lg text-caption font-caption">
+<button class="px-2 py-0.5 rounded bg-surface-card text-text-primary shadow-sm font-medium" type="button">Июль 2025</button>
+<button class="px-2 py-0.5 text-text-secondary hover:text-text-primary" type="button">Вегетация 2025</button>
+<button class="px-2 py-0.5 text-text-secondary hover:text-text-primary" type="button">Все годы</button>
+</div>
+</div>
+<!-- График SVG -->
+<div class="w-full h-[220px] bg-surface-sunken rounded-lg relative overflow-hidden flex flex-col justify-between pt-3 pb-6 px-8">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 1000 180">
+<defs>
+<lineargradient id="ndviGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2a78d6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#2a78d6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Горизонтальные сетки и метки оси Y -->
+<g class="text-text-muted font-axis-label text-axis-label" fill="currentColor">
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="1000" y1="20" y2="20"></line>
+<text text-anchor="end" x="-24" y="24">0,8</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="1000" y1="60" y2="60"></line>
+<text text-anchor="end" x="-24" y="64">0,6</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="1000" y1="100" y2="100"></line>
+<text text-anchor="end" x="-24" y="104">0,4</text>
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="1000" y1="140" y2="140"></line>
+<text text-anchor="end" x="-24" y="144">0,2</text>
+</g>
+<!-- Полупрозрачная зона аномалии: с 8 по 29 июля (X ~ 250 до 930) -->
+<rect fill="#d03b3b" fill-opacity="0.14" height="152" rx="2" width="680" x="250" y="8"></rect>
+<line stroke="#d03b3b" stroke-dasharray="2 2" stroke-opacity="0.5" stroke-width="1" x1="250" x2="250" y1="8" y2="160"></line>
+<line stroke="#d03b3b" stroke-dasharray="2 2" stroke-opacity="0.5" stroke-width="1" x1="930" x2="930" y1="8" y2="160"></line>
+<!-- Климатический коридор нормы (многолетняя норма ~0,58-0,64) -->
+<polygon fill="#e1e0d9" fill-opacity="0.55" points="0,52 150,50 300,54 450,56 600,58 750,62 900,66 1000,70 1000,84 900,80 750,76 600,72 450,70 300,68 150,65 0,66"></polygon>
+<polyline fill="none" points="0,59 150,57 300,61 450,63 600,65 750,69 900,73 1000,77" stroke="#898781" stroke-dasharray="4 3" stroke-width="1.5"></polyline>
+<!-- Заливка под фактической кривой NDVI -->
+<polygon fill="url(#ndviGradient)" points="0,56 120,53 250,58 350,105 480,118 620,114 780,102 930,90 1000,82 1000,160 0,160"></polygon>
+<!-- Фактическая траектория NDVI (0.62 -> спад до 0.31 на Y=118 -> восстановление) -->
+<polyline fill="none" points="0,56 120,53 250,58 350,105 480,118 620,114 780,102 930,90 1000,82" stroke="#2a78d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Точки данных со спутников -->
+<!-- 1 июл: 0.62 -->
+<circle cx="0" cy="56" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="120" cy="53" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- 8 июл (начало спада): 0.60 -->
+<circle cx="250" cy="58" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="350" cy="105" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- Точка экстремума (минимум 0.31, -2.3σ) -->
+<circle cx="480" cy="118" fill="#d03b3b" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="620" cy="114" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="780" cy="102" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- 29 июл (выход из окна детекции) -->
+<circle cx="930" cy="90" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="1000" cy="82" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- Выноска экстремума -->
+<g transform="translate(480, 118)">
+<line stroke="#d03b3b" stroke-width="1" x1="0" x2="0" y1="-8" y2="-24"></line>
+<rect fill="#fcfcfb" filter="drop-shadow(0 1px 2px rgba(11,11,11,0.06))" height="18" rx="3" stroke="#d03b3b" stroke-width="1" width="68" x="-34" y="-42"></rect>
+<text class="font-caption text-caption" fill="#d03b3b" font-size="10" font-weight="600" text-anchor="middle" x="0" y="-30">0,31 (−2,3σ)</text>
+</g>
+</svg>
+<!-- Ось X: Даты шкалы -->
+<div class="absolute left-8 right-8 bottom-1 flex justify-between font-axis-label text-axis-label text-text-muted pointer-events-none">
+<span>1 июл</span>
+<span class="text-status-critical font-medium">8 июл</span>
+<span>15 июл</span>
+<span class="text-status-critical font-medium">22 июл</span>
+<span class="text-status-critical font-medium">29 июл</span>
+</div>
+</div>
+</div>
+<!-- Развернутая карточка аномалии (S-06) -->
+<article class="bg-surface-card rounded-xl p-space-5 shadow-sm relative overflow-hidden flex flex-col gap-space-4 border-l-4 border-l-status-critical">
+<!-- Шапка карточки: тип инцидента, статус и кнопка сворачивания -->
+<header class="flex items-start justify-between">
+<div class="flex items-start gap-space-3">
+<div class="w-8 h-8 rounded-full bg-status-critical/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-critical text-[20px]" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<h1 class="font-headline-2 text-headline-2 text-text-primary">Критическая аномалия</h1>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-status-critical text-on-error font-medium">Почвенная засуха</span>
+</div>
+<p class="font-body text-body text-text-secondary mt-0.5">8 — 29 июля 2025 · 22 дня · минимум −2,3σ</p>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<button aria-label="Свернуть деталь аномалии" class="w-8 h-8 rounded-lg bg-surface-sunken hover:bg-surface-dim text-text-secondary hover:text-text-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">expand_less</span>
+</button>
+</div>
+</header>
+<!-- Ряд KPI плиток: 4 метрики с равной шириной -->
+<div class="grid grid-cols-4 gap-space-3">
+<!-- KPI 1 -->
+<div class="bg-surface-sunken rounded-lg p-space-3 flex flex-col justify-between">
+<span class="font-caption text-caption text-text-muted truncate">Осадки за 30 дней</span>
+<div class="my-1">
+<span class="font-kpi-number text-kpi-number text-status-critical tracking-tight">4 мм</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">норма 48 мм</span>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-sunken rounded-lg p-space-3 flex flex-col justify-between">
+<span class="font-caption text-caption text-text-muted truncate">Температура</span>
+<div class="my-1">
+<span class="font-kpi-number text-kpi-number text-status-serious tracking-tight">+3,6 °C</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">к норме</span>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-sunken rounded-lg p-space-3 flex flex-col justify-between">
+<span class="font-caption text-caption text-text-muted truncate">Дней без осадков</span>
+<div class="my-1">
+<span class="font-kpi-number text-kpi-number text-text-primary tracking-tight">19</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">подряд</span>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-sunken rounded-lg p-space-3 flex flex-col justify-between">
+<span class="font-caption text-caption text-text-muted truncate">Соседние поля</span>
+<div class="my-1">
+<span class="font-kpi-number text-kpi-number text-text-primary tracking-tight">−0,9σ</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">12 полей района</span>
+</div>
+</div>
+<!-- Блок Интерпретации -->
+<section class="flex flex-col gap-space-2 mt-1">
+<h3 class="font-headline-3 text-headline-3 text-text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-sensor-s2">psychology</span>
+<span>Интерпретация</span>
+</h3>
+<p class="font-body text-body text-text-secondary leading-relaxed bg-surface-page p-space-3 rounded-lg">
+        С 8 по 29 июля NDVI держался ниже климатической нормы, минимум −2,3σ (0,31 при норме 0,58). За предыдущие 30 дней выпало 4 мм осадков при норме 48 мм. Соседние поля района просели в среднем на 0,9σ — угнетение шире одного поля, что характерно для почвенной засухи.
+      </p>
+</section>
+<!-- Блок Доказательств -->
+<section class="flex flex-col gap-space-2 mt-1">
+<h3 class="font-headline-3 text-headline-3 text-text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-sensor-s2">fact_check</span>
+<span>Доказательства</span>
+</h3>
+<!-- Табличная двухколоночная сетка 6 фактов -->
+<div class="grid grid-cols-2 gap-x-space-4 gap-y-2 bg-surface-page p-space-3 rounded-lg text-small font-small">
+<!-- Левая колонка -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between py-1 border-b border-border-hairline">
+<span class="text-text-muted">Осадки, 30 дней</span>
+<span class="font-medium text-text-primary">4,0 мм (норма 48,0)</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-border-hairline">
+<span class="text-text-muted">Аномалия температуры</span>
+<span class="font-medium text-status-critical">+3,6 °C</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-text-muted">Средний z соседей</span>
+<span class="font-medium text-text-primary">−0,91</span>
+</div>
+</div>
+<!-- Правая колонка -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between py-1 border-b border-border-hairline">
+<span class="text-text-muted">Число соседей</span>
+<span class="font-medium text-text-primary">12</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-border-hairline">
+<span class="text-text-muted">Сенсоры согласованы</span>
+<span class="inline-flex items-center gap-1 font-medium text-status-good">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Да
+            </span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-text-muted">Наблюдений в периоде</span>
+<span class="font-medium text-text-primary">6 из 22 дней</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Нижняя панель действий -->
+<footer class="flex items-center justify-between pt-space-2 mt-1">
+<div class="flex items-center gap-space-2 text-caption font-caption text-text-muted">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Автоматическая классификация подтверждена ансамблем моделей VegaWatch</span>
+</div>
+<div class="flex items-center gap-space-2">
+<button class="h-8 px-space-3 rounded-lg bg-surface-sunken hover:bg-surface-dim transition-colors text-text-primary font-small text-small flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">file_download</span>
+<span>Экспорт CSV</span>
+</button>
+<button class="h-8 px-space-3 rounded-lg bg-sensor-s2 hover:bg-primary transition-colors text-on-primary font-small text-small flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Показать на карте</span>
+</button>
+</div>
+</footer>
+</article>
+<!-- Свернутые сопутствующие события в ленте для контекста -->
+<div class="flex flex-col gap-space-2 mt-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Другие события на полигоне (2)</span>
+<span class="font-caption text-caption text-text-muted">Сезон 2024–2025</span>
+</div>
+<!-- Карточка 2 (свернутая) -->
+<div class="bg-surface-card rounded-lg px-space-4 py-space-3 shadow-sm flex items-center justify-between hover:bg-surface-sunken/40 transition-colors cursor-pointer">
+<div class="flex items-center gap-space-3">
+<div class="w-2.5 h-2.5 rounded-full bg-status-warning flex-shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-text-primary">Умеренное замедление всходов</span>
+<span class="px-1.5 py-0.2 rounded text-[11px] font-caption bg-status-warning/10 text-status-warning font-medium">−1,4σ</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">12 — 19 мая 2025 · 7 дней · температурный стресс (заморозки на почве)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">chevron_right</span>
+</div>
+<!-- Карточка 3 (свернутая) -->
+<div class="bg-surface-card rounded-lg px-space-4 py-space-3 shadow-sm flex items-center justify-between hover:bg-surface-sunken/40 transition-colors cursor-pointer">
+<div class="flex items-center gap-space-3">
+<div class="w-2.5 h-2.5 rounded-full bg-sensor-s2 flex-shrink-0"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-medium text-body-medium text-text-primary">Опережение фазы кущения</span>
+<span class="px-1.5 py-0.2 rounded text-[11px] font-caption bg-brand-weak text-sensor-s2 font-medium">+1,1σ</span>
+</div>
+<span class="font-caption text-caption text-text-secondary">20 — 28 апреля 2025 · 8 дней · благоприятный температурный режим</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">chevron_right</span>
+</div>
+</div>
+</div></main></div></body></html>

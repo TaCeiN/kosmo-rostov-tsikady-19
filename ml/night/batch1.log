@@ -1,0 +1,12 @@
+фолдов в кэше: 4
+baseline                     RMSE=0.07841 clean=0.07003 MAE=0.04706 ±0.05=68.0% 70.3s
+resid_whittaker              RMSE=0.07932 clean=0.07110 MAE=0.04780 ±0.05=67.5% 79.8s
+resid_savgol                 RMSE=0.07905 clean=0.07067 MAE=0.04795 ±0.05=67.5% 81.1s
+resid_lin                    RMSE=0.07952 clean=0.07124 MAE=0.04806 ±0.05=67.5% 79.7s
+drop_broken                  RMSE=0.07867 clean=0.07028 MAE=0.04719 ±0.05=68.2% 76.5s
+resid_whit_drop              RMSE=0.07894 clean=0.07079 MAE=0.04776 ±0.05=67.7% 78.2s
+huber                        RMSE=0.07864 clean=0.07032 MAE=0.04715 ±0.05=68.1% 73.0s
+fair                         RMSE=0.07836 clean=0.07000 MAE=0.04679 ±0.05=68.9% 75.5s
+mae                          RMSE=0.07921 clean=0.07093 MAE=0.04606 ±0.05=70.3% 75.4s
+lr02_2500                    RMSE=0.07852 clean=0.07013 MAE=0.04709 ±0.05=68.4% 169.8s
+lr08_700                     RMSE=0.07961 clean=0.07123 MAE=0.04787 ±0.05=67.9% 470.4s

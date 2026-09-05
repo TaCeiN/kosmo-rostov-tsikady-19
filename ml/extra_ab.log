@@ -1,0 +1,25 @@
+данные: 157140 строк, 78 полигонов
+половина A (уходит в обучение): 38 полигонов, 1833 ответов
+половина B (на ней метрика):    40 полигонов, 1279 ответов
+
+[1/2] control — ответы A вписаны, внешних данных нет
+  обучающих примеров: 112485
+
+[2/2] augmented — плюс внешние данные: extra_all.csv
+  внешних строк: 31950, полигонов 10
+  обучающих примеров: 124215
+
+=== цена внешних данных, метрика на половине B ===
+              n     RMSE  GapScore      MAE    MedAE       R2     bias  within_0.05
+method                                                                             
+control    1279  0.06663     10.01  0.04044  0.02487  0.90196  0.00206     74.58952
+augmented  1279  0.06686      9.94  0.04042  0.02422  0.90128  0.00355     74.51134
+Traceback (most recent call last):
+  File "D:\ML Hack\eval_halfsplit.py", line 215, in <module>
+    main()
+  File "D:\ML Hack\eval_halfsplit.py", line 183, in main
+    print(f"\n\u0394RMSE {d_rmse:+.5f}  \u0394GapScore {d_score:+.2f}  -> добавление {what} {verdict}")
+  File "C:\Users\nikol\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 2: character maps to <undefined>

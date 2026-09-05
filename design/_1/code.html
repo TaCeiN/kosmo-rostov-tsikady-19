@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full gap-space-4">
+<script>
+    (function activateSidebar() {
+      const activeItem = document.querySelector('aside a[data-path="anomaly-detection"]');
+      if (activeItem) {
+        document.querySelectorAll('aside a[data-path]').forEach(el => {
+          el.className = "flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium";
+        });
+        activeItem.className = "flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg bg-brand-weak text-sensor-s2 font-medium font-body-medium text-body-medium";
+      }
+    })();
+  </script>
+<!-- Summary Metric Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4">
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инциденты сезона</span>
+<span class="material-symbols-outlined text-status-critical text-[20px]">crisis_alert</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-kpi-number text-kpi-number text-text-primary tracking-tight">14</span>
+<span class="font-body text-body text-text-secondary">полей с аномалиями</span>
+</div>
+<p class="font-caption text-caption text-text-muted mt-space-1">В регионе за текущий вегетационный период</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-status-critical/5 rounded-full pointer-events-none"></div>
+</div>
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Пораженная площадь</span>
+<span class="material-symbols-outlined text-status-warning text-[20px]">area_chart</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-kpi-number text-kpi-number text-text-primary tracking-tight">3 840</span>
+<span class="font-body text-body text-text-secondary">га</span>
+</div>
+<p class="font-caption text-caption text-text-muted mt-space-1">Общая площадь участков с отклонением > 1,2σ</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-status-warning/5 rounded-full pointer-events-none"></div>
+</div>
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Максимальное отклонение</span>
+<span class="material-symbols-outlined text-status-serious text-[20px]">trending_down</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-kpi-number text-kpi-number text-status-critical tracking-tight">−2,42σ</span>
+<span class="font-caption text-caption px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-medium">Экстремально</span>
+</div>
+<p class="font-caption text-caption text-text-muted mt-space-1 truncate">Поле №3 у Аксая, Шпаковский р-н (почвенная засуха)</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-status-critical/5 rounded-full pointer-events-none"></div>
+</div>
+</div>
+<!-- Primary Workspace: Left Filter Subpanel + Main Datagrid -->
+<div class="flex flex-col lg:flex-row gap-space-4 items-start w-full">
+<!-- Subpanel: Filters & Batch Operations (320px) -->
+<div class="w-full lg:w-[320px] shrink-0 bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-2 text-headline-2 text-text-primary">Реестр аномалий</h2>
+<span class="font-caption text-caption text-text-muted px-2 py-0.5 rounded bg-surface-sunken">v2.4</span>
+</div>
+<!-- Filter chips -->
+<div class="flex flex-col gap-space-2">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Категория</span>
+<div class="flex flex-wrap gap-1.5" id="category-chips">
+<button class="chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-brand-weak text-sensor-s2 font-medium" data-filter="all" type="button">Все (14)</button>
+<button class="chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-surface-sunken text-text-secondary hover:text-text-primary" data-filter="critical" type="button">Критические (3)</button>
+<button class="chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-surface-sunken text-text-secondary hover:text-text-primary" data-filter="stress" type="button">Угнетение (8)</button>
+<button class="chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-surface-sunken text-text-secondary hover:text-text-primary" data-filter="phenology" type="button">Фенология (3)</button>
+</div>
+</div>
+<!-- Detailed Parameters -->
+<div class="flex flex-col gap-space-3 pt-space-2">
+<div>
+<label class="block font-caption text-caption text-text-secondary mb-1">Порог отклонения</label>
+<div class="relative">
+<select class="w-full h-8 px-space-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:bg-surface-container-lowest focus:outline-none">
+<option>z ≤ −2,0σ (Критические сбои)</option>
+<option>z ≤ −1,5σ (Выраженный стресс)</option>
+<option>z ≤ −1,0σ (Любые отклонения)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption text-text-secondary mb-1">Минимальная площадь</label>
+<div class="relative">
+<select class="w-full h-8 px-space-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:bg-surface-container-lowest focus:outline-none">
+<option>от 10 га</option>
+<option>от 25 га</option>
+<option>от 50 га</option>
+<option>от 100 га</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption text-text-secondary mb-1">Культура</label>
+<div class="relative">
+<select class="w-full h-8 px-space-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:bg-surface-container-lowest focus:outline-none">
+<option>Все культуры</option>
+<option>Озимая пшеница</option>
+<option>Ячмень яровой</option>
+<option>Кукуруза</option>
+<option>Подсолнечник</option>
+<option>Соя</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-caption text-caption text-text-secondary mb-1">Сортировка</label>
+<div class="relative">
+<select class="w-full h-8 px-space-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:bg-surface-container-lowest focus:outline-none">
+<option>По тяжести отклонения (z-score)</option>
+<option>По площади поражения</option>
+<option>По длительности стресса</option>
+<option>По дате обнаружения</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Quick GIS preview thumbnail -->
+<div class="pt-space-2 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Пространственный охват</span>
+<span class="font-caption text-caption text-sensor-s2">5 районов</span>
+</div>
+<div class="w-full h-28 bg-cover bg-center rounded-lg shadow-sm relative overflow-hidden" data-location="Stavropol Krai, Russia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsYbvHz5h_oLN8M2lzK35CqYNl_RpCqeqnuPBVebBb0yPzfU6H-zZ7a4Gdji_ZppTWIq0WtiYk6XjXSXOeP2yHmOXez937rCE5TrzDgbhFKLbgN8gJD4EdjP3oAf00I2xhLwgSXHs1xMdXhR7jf2AzgTGtQGIgD6rISqAmljKviw-_Ru-22R9A6lIAq0GTZ3_Tl1QJHinynTypDcardqI5hpEv1YmCPI5fqpD7ism1HP06UtB_GPwIrA')">
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/70 via-transparent to-transparent flex items-end p-2">
+<span class="font-caption text-caption text-surface-card flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-critical"></span> Шпаковский / Изобильненский
+            </span>
+</div>
+</div>
+</div>
+<div class="pt-space-2 mt-auto">
+<button class="w-full h-8 px-space-3 bg-surface-sunken hover:bg-brand-weak text-text-primary hover:text-sensor-s2 transition-colors rounded-lg font-small text-small font-medium flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Экспорт сводного отчета (PDF/XLSX)</span>
+</button>
+</div>
+</div>
+<!-- Main Data Area: Table + Actions -->
+<div class="flex-1 w-full min-w-0 bg-surface-card rounded-xl shadow-sm flex flex-col overflow-hidden">
+<!-- Toolbar header -->
+<div class="p-space-4 bg-surface-card flex flex-wrap items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-status-critical"></span>
+<span class="font-headline-3 text-headline-3 text-text-primary">Каталог инцидентов спектрального отклика</span>
+</div>
+<span class="font-caption text-caption text-text-muted">| NDVI < Историческая норма (2018–2023)</span>
+</div>
+<div class="flex items-center gap-2 text-text-muted font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-sensor-s2">satellite</span>
+<span>Спутники: S2A, S2B, Landsat-8/9</span>
+</div>
+</div>
+<!-- Tabular Grid -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body text-body border-collapse min-w-[900px]">
+<thead>
+<tr class="bg-surface-sunken text-text-secondary font-caption text-caption uppercase tracking-wider">
+<th class="py-2.5 px-space-4 w-10">
+<input class="w-4 h-4 rounded cursor-pointer accent-sensor-s2" id="select-all" type="checkbox"/>
+</th>
+<th class="py-2.5 px-space-3">Статус / Тип</th>
+<th class="py-2.5 px-space-3">Поле и локация</th>
+<th class="py-2.5 px-space-3">Культура</th>
+<th class="py-2.5 px-space-3">Площадь</th>
+<th class="py-2.5 px-space-3">Период</th>
+<th class="py-2.5 px-space-3 text-right">Мин. z-score</th>
+<th class="py-2.5 px-space-3">Вероятная причина</th>
+<th class="py-2.5 px-space-4 text-right">Действие</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-sunken text-small font-small">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-sunken/40 transition-colors group">
+<td class="py-3 px-space-4">
+<input class="row-selector w-4 h-4 rounded cursor-pointer accent-sensor-s2" type="checkbox"/>
+</td>
+<td class="py-3 px-space-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-caption text-caption font-medium bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-status-critical"></span>
+                  Критично
+                </span>
+</td>
+<td class="py-3 px-space-3">
+<div class="font-body-medium text-body-medium text-text-primary">Поле №3 у Аксая</div>
+<div class="font-caption text-caption text-text-muted">Шпаковский р-н • контур #1094</div>
+</td>
+<td class="py-3 px-space-3">
+<span class="text-text-primary">Озимая пшеница</span>
+</td>
+<td class="py-3 px-space-3">
+<span class="font-medium text-text-primary">96,2 га</span>
+</td>
+<td class="py-3 px-space-3">
+<div class="text-text-primary">8 — 29 июля</div>
+<div class="font-caption text-caption text-text-muted">22 дня подряд</div>
+</td>
+<td class="py-3 px-space-3 text-right font-medium text-status-critical">
+                −2,3σ
+              </td>
+<td class="py-3 px-space-3">
+<div class="inline-flex items-center gap-1 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-serious">water_drop</span>
+<span>Почвенная засуха</span>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<button class="px-2.5 py-1 bg-surface-sunken group-hover:bg-brand-weak group-hover:text-sensor-s2 text-text-primary rounded text-caption font-caption font-medium transition-colors">
+                  Открыть карточку
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-sunken/40 transition-colors group">
+<td class="py-3 px-space-4">
+<input class="row-selector w-4 h-4 rounded cursor-pointer accent-sensor-s2" type="checkbox"/>
+</td>
+<td class="py-3 px-space-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-caption text-caption font-medium bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-status-critical"></span>
+                  Критично
+                </span>
+</td>
+<td class="py-3 px-space-3">
+<div class="font-body-medium text-body-medium text-text-primary">Северный сектор 4</div>
+<div class="font-caption text-caption text-text-muted">Изобильненский р-н • контур #0821</div>
+</td>
+<td class="py-3 px-space-3">
+<span class="text-text-primary">Ячмень яровой</span>
+</td>
+<td class="py-3 px-space-3">
+<span class="font-medium text-text-primary">218,0 га</span>
+</td>
+<td class="py-3 px-space-3">
+<div class="text-text-primary">14 — 28 июля</div>
+<div class="font-caption text-caption text-text-muted">15 дней</div>
+</td>
+<td class="py-3 px-space-3 text-right font-medium text-status-critical">
+                −2,1σ
+              </td>
+<td class="py-3 px-space-3">
+<div class="inline-flex items-center gap-1 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-serious">water_drop</span>
+<span>Почвенная засуха</span>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<button class="px-2.5 py-1 bg-surface-sunken group-hover:bg-brand-weak group-hover:text-sensor-s2 text-text-primary rounded text-caption font-caption font-medium transition-colors">
+                  Открыть карточку
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-sunken/40 transition-colors group">
+<td class="py-3 px-space-4">
+<input class="row-selector w-4 h-4 rounded cursor-pointer accent-sensor-s2" type="checkbox"/>
+</td>
+<td class="py-3 px-space-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-caption text-caption font-medium bg-status-warning/15 text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  Угнетение
+                </span>
+</td>
+<td class="py-3 px-space-3">
+<div class="font-body-medium text-body-medium text-text-primary">Поле №12 у балки</div>
+<div class="font-caption text-caption text-text-muted">Грачевский р-н • контур #0433</div>
+</td>
+<td class="py-3 px-space-3">
+<span class="text-text-primary">Кукуруза</span>
+</td>
+<td class="py-3 px-space-3">
+<span class="font-medium text-text-primary">142,4 га</span>
+</td>
+<td class="py-3 px-space-3">
+<div class="text-text-primary">12 — 24 мая</div>
+<div class="font-caption text-caption text-text-muted">13 дней</div>
+</td>
+<td class="py-3 px-space-3 text-right font-medium text-status-warning">
+                −1,4σ
+              </td>
+<td class="py-3 px-space-3">
+<div class="inline-flex items-center gap-1 text-text-secondary truncate max-w-[210px]" title="Локальное угнетение (сорняки/агротехника)">
+<span class="material-symbols-outlined text-[16px] text-text-muted">spa</span>
+<span class="truncate">Локальное угнетение (сорняки/агротехника)</span>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<button class="px-2.5 py-1 bg-surface-sunken group-hover:bg-brand-weak group-hover:text-sensor-s2 text-text-primary rounded text-caption font-caption font-medium transition-colors">
+                  Открыть карточку
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-sunken/40 transition-colors group">
+<td class="py-3 px-space-4">
+<input class="row-selector w-4 h-4 rounded cursor-pointer accent-sensor-s2" type="checkbox"/>
+</td>
+<td class="py-3 px-space-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-caption text-caption font-medium bg-brand-weak text-sensor-s2">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-s2"></span>
+                  Фенология
+                </span>
+</td>
+<td class="py-3 px-space-3">
+<div class="font-body-medium text-body-medium text-text-primary">Контур OSM way/88412</div>
+<div class="font-caption text-caption text-text-muted">Кочубеевский р-н • сектор В</div>
+</td>
+<td class="py-3 px-space-3">
+<span class="text-text-primary">Подсолнечник</span>
+</td>
+<td class="py-3 px-space-3">
+<span class="font-medium text-text-primary">64,0 га</span>
+</td>
+<td class="py-3 px-space-3">
+<div class="text-text-primary">20 — 30 мая</div>
+<div class="font-caption text-caption text-text-muted">11 дней</div>
+</td>
+<td class="py-3 px-space-3 text-right font-medium text-sensor-s2">
+                −1,2σ
+              </td>
+<td class="py-3 px-space-3">
+<div class="inline-flex items-center gap-1 text-text-secondary truncate max-w-[210px]" title="Холодная весна (GDD отставание)">
+<span class="material-symbols-outlined text-[16px] text-sensor-s2">ac_unit</span>
+<span class="truncate">Холодная весна (GDD отставание)</span>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<button class="px-2.5 py-1 bg-surface-sunken group-hover:bg-brand-weak group-hover:text-sensor-s2 text-text-primary rounded text-caption font-caption font-medium transition-colors">
+                  Открыть карточку
+                </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-sunken/40 transition-colors group">
+<td class="py-3 px-space-4">
+<input class="row-selector w-4 h-4 rounded cursor-pointer accent-sensor-s2" type="checkbox"/>
+</td>
+<td class="py-3 px-space-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded font-caption text-caption font-medium bg-status-warning/15 text-text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  Угнетение
+                </span>
+</td>
+<td class="py-3 px-space-3">
+<div class="font-body-medium text-body-medium text-text-primary">Степное-2</div>
+<div class="font-caption text-caption text-text-muted">Кочубеевский р-н • контур #0115</div>
+</td>
+<td class="py-3 px-space-3">
+<span class="text-text-primary">Озимая пшеница</span>
+</td>
+<td class="py-3 px-space-3">
+<span class="font-medium text-text-primary">310,5 га</span>
+</td>
+<td class="py-3 px-space-3">
+<div class="text-text-primary">02 — 16 июля</div>
+<div class="font-caption text-caption text-text-muted">15 дней</div>
+</td>
+<td class="py-3 px-space-3 text-right font-medium text-status-warning">
+                −1,6σ
+              </td>
+<td class="py-3 px-space-3">
+<div class="inline-flex items-center gap-1 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-serious">thermostat</span>
+<span>Тепловой стресс</span>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<button class="px-2.5 py-1 bg-surface-sunken group-hover:bg-brand-weak group-hover:text-sensor-s2 text-text-primary rounded text-caption font-caption font-medium transition-colors">
+                  Открыть карточку
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination & Batch Selection Bar -->
+<div class="p-space-3 bg-surface-card flex flex-wrap items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3">
+<span class="font-caption text-caption text-text-muted" id="selection-counter">Выбрано 0 из 14</span>
+<div class="h-4 w-[1px] bg-surface-sunken"></div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-space-3 bg-surface-sunken hover:bg-surface-container text-text-primary rounded-lg font-small text-small font-medium transition-colors flex items-center gap-1.5 opacity-60 pointer-events-none" id="btn-mark-verified">
+<span class="material-symbols-outlined text-[16px] text-status-good">task_alt</span>
+<span>Отметить проверенными</span>
+</button>
+<button class="h-8 px-space-3 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-small text-small font-medium transition-colors flex items-center gap-1.5 opacity-60 pointer-events-none" id="btn-create-order">
+<span class="material-symbols-outlined text-[16px]">assignment_add</span>
+<span>Сформировать предписание</span>
+</button>
+</div>
+</div>
+<!-- Pagination Controls -->
+<div class="flex items-center gap-space-2 font-caption text-caption text-text-muted">
+<span>Страница 1 из 3</span>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-sunken text-text-muted hover:text-text-primary transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-brand-weak text-sensor-s2 font-medium">1</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-sunken text-text-secondary hover:text-text-primary transition-colors">2</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-sunken text-text-secondary hover:text-text-primary transition-colors">3</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-sunken text-text-muted hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Diagnostics Banner / Inspector Preview -->
+<div class="w-full bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col lg:flex-row gap-space-4 items-center justify-between">
+<div class="flex items-start gap-space-3">
+<div class="w-10 h-10 rounded-lg bg-surface-sunken flex items-center justify-center text-sensor-s2 shrink-0">
+<span class="material-symbols-outlined text-[24px]">satellite_alt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-3 text-headline-3 text-text-primary">Автоматическая калибровка моделей</span>
+<span class="px-2 py-0.5 rounded bg-status-good/10 text-status-good text-caption font-caption font-medium">Активна</span>
+</div>
+<p class="font-caption text-caption text-text-muted mt-0.5">
+          Базовые кривые вегетации нормализованы с учётом многолетних серий MODIS (2000–2023) и текущих метеорологических данных ERA5-Land.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-3 shrink-0">
+<div class="text-right">
+<div class="font-caption text-caption text-text-muted">Обновление весов детектора</div>
+<div class="font-small text-small font-body-medium text-text-primary">Сегодня, 12:00 MSK</div>
+</div>
+<button class="h-8 px-space-3 bg-surface-sunken hover:bg-surface-container rounded-lg font-small text-small text-text-primary transition-colors">
+        Параметры алгоритма
+      </button>
+</div>
+</div>
+<script>
+    (function handleInteractivity() {
+      const selectAll = document.getElementById('select-all');
+      const rowCheckboxes = document.querySelectorAll('.row-selector');
+      const counter = document.getElementById('selection-counter');
+      const btnVerify = document.getElementById('btn-mark-verified');
+      const btnOrder = document.getElementById('btn-create-order');
+
+      function updateBatchBar() {
+        const checkedCount = document.querySelectorAll('.row-selector:checked').length;
+        counter.textContent = `Выбрано ${checkedCount} из 14`;
+        if (checkedCount > 0) {
+          btnVerify.classList.remove('opacity-60', 'pointer-events-none');
+          btnOrder.classList.remove('opacity-60', 'pointer-events-none');
+        } else {
+          btnVerify.classList.add('opacity-60', 'pointer-events-none');
+          btnOrder.classList.add('opacity-60', 'pointer-events-none');
+        }
+      }
+
+      if (selectAll) {
+        selectAll.addEventListener('change', (e) => {
+          rowCheckboxes.forEach(cb => {
+            cb.checked = e.target.checked;
+          });
+          updateBatchBar();
+        });
+      }
+
+      rowCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          if (selectAll) {
+            selectAll.checked = Array.from(rowCheckboxes).every(c => c.checked);
+          }
+          updateBatchBar();
+        });
+      });
+
+      // Quick filter chips click behavior
+      const chips = document.querySelectorAll('#category-chips .chip-btn');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => {
+            c.className = "chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-surface-sunken text-text-secondary hover:text-text-primary";
+          });
+          chip.className = "chip-btn px-2.5 py-1 rounded-lg text-caption font-caption transition-colors bg-brand-weak text-sensor-s2 font-medium";
+        });
+      });
+    })();
+  </script>
+</div></main></div></body></html>

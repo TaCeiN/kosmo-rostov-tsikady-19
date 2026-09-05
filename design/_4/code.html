@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full gap-space-4">
+<script>
+    // Ensure active nav link state in App Shell sidebar
+    (function syncNav() {
+      const activeLink = document.querySelector('nav a[data-path="crop-rotation"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-text-secondary', 'hover:bg-surface-sunken');
+        activeLink.classList.add('bg-brand-weak', 'text-sensor-s2', 'font-medium');
+      }
+    })();
+  </script>
+<!-- Top Action & Meta Banner -->
+<div class="flex items-center justify-between bg-surface-card p-space-4 rounded-xl shadow-sm">
+<div class="flex items-center gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-sunken flex items-center justify-center text-sensor-s2 shrink-0">
+<span class="material-symbols-outlined text-[24px]">grass</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-2">
+<h1 class="font-headline-2 text-headline-2 text-text-primary truncate">Ретроспективная матрица севооборота</h1>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-surface-sunken text-text-secondary shrink-0">Кадастр 26:11:041201:14</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-brand-weak text-sensor-s2 shrink-0">5 сезонов синхронизировано</span>
+</div>
+<p class="font-caption text-caption text-text-muted mt-0.5 truncate">Поле №3 у Аксая · Координаты центра: 45.1482° N, 42.0127° E · Базовый агропаспорт №В-884</p>
+</div>
+</div>
+<div class="flex items-center gap-space-3 shrink-0">
+<button class="h-8 px-space-3 bg-surface-card text-text-primary rounded-lg font-small text-small hover:bg-surface-sunken transition-colors flex items-center gap-space-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-text-muted">tune</span>
+<span>Сравнить контуры</span>
+</button>
+<button class="h-8 px-space-3 bg-sensor-s2 text-surface-container-lowest rounded-lg font-small text-small hover:bg-primary transition-colors flex items-center gap-space-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Экспорт агропаспорта (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Main Split Architecture -->
+<div class="grid grid-cols-12 gap-space-4 items-start">
+<!-- Left Analytical Control Column (320px equivalent in 12-col: 3.5 cols on desktop) -->
+<div class="col-span-12 xl:col-span-3 flex flex-col gap-space-3">
+<!-- Field Context Card -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary">Севооборот</span>
+<span class="material-symbols-outlined text-[18px] text-text-muted">filter_alt</span>
+</div>
+<!-- Field Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-text-muted">Выбранный участок</label>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex items-center justify-between cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="min-w-0">
+<div class="font-body-medium text-body-medium text-text-primary truncate">Поле №3 у Аксая</div>
+<div class="font-caption text-caption text-text-muted">96,2 га · Чернозём обыкновенный</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-text-muted">unfold_more</span>
+</div>
+</div>
+<!-- Retrospective Depth -->
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-text-muted">Глубина архива</label>
+<div class="bg-surface-sunken h-8 px-space-3 rounded-lg flex items-center justify-between text-small font-small text-text-primary cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-sensor-s2">history</span>
+<span>Архив за 5 лет (2021 — 2025)</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-text-muted">arrow_drop_down</span>
+</div>
+</div>
+<!-- Metric Mode -->
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-text-muted">Режим анализа телеметрии</label>
+<div class="bg-surface-sunken p-1 rounded-lg flex flex-col gap-1">
+<button class="w-full text-left px-2.5 py-1.5 rounded text-small font-body-medium bg-surface-container-lowest text-sensor-s2 shadow-sm flex items-center justify-between">
+<span>Распознанные культуры</span>
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-s2"></span>
+</button>
+<button class="w-full text-left px-2.5 py-1.5 rounded text-small font-small text-text-secondary hover:text-text-primary hover:bg-surface-page transition-colors">
+              Интегральный NDVI
+            </button>
+<button class="w-full text-left px-2.5 py-1.5 rounded text-small font-small text-text-secondary hover:text-text-primary hover:bg-surface-page transition-colors">
+              Баланс биомассы и влаги
+            </button>
+</div>
+</div>
+</div>
+<!-- KPI Summary Box -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-3">
+<span class="font-caption text-caption uppercase tracking-wider text-text-muted font-body-medium">Диагностика устойчивости</span>
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary">Соблюдение ротации</span>
+<span class="material-symbols-outlined text-[16px] text-status-good">check_circle</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary">Оптимальное (4 класса культур)</div>
+<div class="w-full bg-surface-card h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-status-good h-full w-[92%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary">Риск утомления почвы</span>
+<span class="px-1.5 py-0.2 rounded text-[11px] font-caption bg-surface-container-lowest text-status-good font-medium">Безопасно</span>
+</div>
+<div class="font-headline-2 text-headline-2 text-text-primary">12% <span class="font-caption text-caption text-text-muted">/ допустимо до 35%</span></div>
+<p class="font-caption text-caption text-text-muted mt-0.5">Отсутствует повтор однотипных корневых систем за последние 3 года.</p>
+</div>
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-secondary">Предшественник 2025</span>
+<span class="material-symbols-outlined text-[16px] text-sensor-s2">spa</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary">Чистый пар (2024)</div>
+<div class="text-caption font-caption text-text-secondary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-status-good">trending_up</span>
+<span>+34 мм продуктивной почвенной влаги</span>
+</div>
+</div>
+</div>
+<!-- Field Satellite Snapshot Card -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-2">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-text-muted font-body-medium">Спектральная маска поля</span>
+<span class="font-caption text-caption text-text-muted">Sentinel-2 MSI</span>
+</div>
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-sunken">
+<div class="w-full h-full bg-cover bg-center" data-location="Stavropol Krai, Aksay Field" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsYbvHz5h_oLN8M2lzK35CqYNl_RpCqeqnuPBVebBb0yPzfU6H-zZ7a4Gdji_ZppTWIq0WtiYk6XjXSXOeP2yHmOXez937rCE5TrzDgbhFKLbgN8gJD4EdjP3oAf00I2xhLwgSXHs1xMdXhR7jf2AzgTGtQGIgD6rISqAmljKviw-_Ru-22R9A6lIAq0GTZ3_Tl1QJHinynTypDcardqI5hpEv1YmCPI5fqpD7ism1HP06UtB_GPwIrA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/70 via-transparent to-transparent flex items-end p-2.5">
+<div class="text-surface-container-lowest text-caption font-caption flex items-center justify-between w-full">
+<span>Контур: 2,14 км периметр</span>
+<span class="bg-sensor-s2/90 px-1.5 py-0.5 rounded text-[11px]">NDVI 0.68 ср.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Workspace Area (9 cols on desktop) -->
+<div class="col-span-12 xl:col-span-9 flex flex-col gap-space-4">
+<!-- 5-Year Chronological Grid -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-3 text-headline-3 text-text-primary">Хронологическая цепь чередования культур</h2>
+<p class="font-caption text-caption text-text-muted">Спектральная классификация по многолетним архивам Sentinel-2, Landsat-8/9 и Terra/MODIS</p>
+</div>
+<div class="flex items-center gap-space-2 text-caption font-caption text-text-muted">
+<span class="w-2 h-2 rounded-full bg-status-good"></span>
+<span>Валидация ИИ: 98.4%</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-2 pt-space-2">
+<!-- 2025 Card -->
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="absolute top-0 left-0 right-0 h-1 bg-sensor-s2"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary font-bold">2025</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-caption bg-brand-weak text-sensor-s2 font-medium">Текущий</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary mt-2">Озимая пшеница</div>
+<div class="font-caption text-caption text-text-secondary mt-1">Сорт: Безостая 100</div>
+<div class="mt-3 pt-2 bg-surface-card/60 p-2 rounded flex flex-col gap-1 text-caption font-caption">
+<div class="flex justify-between text-text-secondary">
+<span>Прогноз сбора:</span>
+<span class="font-medium text-text-primary">38,4 ц/га</span>
+</div>
+<div class="flex justify-between text-text-secondary">
+<span>NDVI пик:</span>
+<span class="font-medium text-sensor-s2">0,74 (май)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-[11px] font-caption text-status-serious">
+<span class="material-symbols-outlined text-[14px]">thunderstorm</span>
+<span>Стресс в июле (дефицит влаги)</span>
+</div>
+</div>
+<!-- 2024 Card -->
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary font-bold">2024</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-caption bg-surface-card text-text-secondary">Пар</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary mt-2">Чистый пар</div>
+<div class="font-caption text-caption text-text-secondary mt-1">Культивация: 4-кратная</div>
+<div class="mt-3 pt-2 bg-surface-card/60 p-2 rounded flex flex-col gap-1 text-caption font-caption">
+<div class="flex justify-between text-text-secondary">
+<span>Накопление влаги:</span>
+<span class="font-medium text-status-good">+118 мм</span>
+</div>
+<div class="flex justify-between text-text-secondary">
+<span>Засоренность:</span>
+<span class="font-medium text-text-primary">< 3% (низкая)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-[11px] font-caption text-text-muted">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+<span>Восстановление органики</span>
+</div>
+</div>
+<!-- 2023 Card -->
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="absolute top-0 left-0 right-0 h-1 bg-sensor-landsat"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary font-bold">2023</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-caption bg-surface-card text-text-secondary">Пропашная</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary mt-2">Подсолнечник</div>
+<div class="font-caption text-caption text-text-secondary mt-1">Гибрид: НК Неома</div>
+<div class="mt-3 pt-2 bg-surface-card/60 p-2 rounded flex flex-col gap-1 text-caption font-caption">
+<div class="flex justify-between text-text-secondary">
+<span>Фактический сбор:</span>
+<span class="font-medium text-text-primary">24,2 ц/га</span>
+</div>
+<div class="flex justify-between text-text-secondary">
+<span>NDVI пик:</span>
+<span class="font-medium text-sensor-landsat">0,82 (июль)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-[11px] font-caption text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">event_available</span>
+<span>Уборка завершена 18.09</span>
+</div>
+</div>
+<!-- 2022 Card -->
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="absolute top-0 left-0 right-0 h-1 bg-status-warning"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary font-bold">2022</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-caption bg-surface-card text-text-secondary">Зерновая</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary mt-2">Кукуруза на зерно</div>
+<div class="font-caption text-caption text-text-secondary mt-1">ФАО 280 (Ладожский)</div>
+<div class="mt-3 pt-2 bg-surface-card/60 p-2 rounded flex flex-col gap-1 text-caption font-caption">
+<div class="flex justify-between text-text-secondary">
+<span>Фактический сбор:</span>
+<span class="font-medium text-text-primary">58,6 ц/га</span>
+</div>
+<div class="flex justify-between text-text-secondary">
+<span>NDVI пик:</span>
+<span class="font-medium text-text-primary">0,78 (август)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-[11px] font-caption text-status-good">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span>Высокая рентабельность</span>
+</div>
+</div>
+<!-- 2021 Card -->
+<div class="bg-surface-sunken p-space-3 rounded-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="absolute top-0 left-0 right-0 h-1 bg-sensor-modis"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary font-bold">2021</span>
+<span class="px-1.5 py-0.5 rounded text-[11px] font-caption bg-surface-card text-text-secondary">Зерновая</span>
+</div>
+<div class="font-body-medium text-body-medium text-text-primary mt-2">Озимый ячмень</div>
+<div class="font-caption text-caption text-text-secondary mt-1">Сорт: Достойный</div>
+<div class="mt-3 pt-2 bg-surface-card/60 p-2 rounded flex flex-col gap-1 text-caption font-caption">
+<div class="flex justify-between text-text-secondary">
+<span>Фактический сбор:</span>
+<span class="font-medium text-text-primary">42,1 ц/га</span>
+</div>
+<div class="flex justify-between text-text-secondary">
+<span>NDVI пик:</span>
+<span class="font-medium text-sensor-modis">0,71 (май)</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-[11px] font-caption text-text-secondary">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Ранний укос в июне</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Year Overlay Phenological Chart (April - October) -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-3 text-headline-3 text-text-primary">Многолетнее фенологическое наложение NDVI</h2>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-surface-sunken text-text-secondary">Апрель — Октябрь</span>
+</div>
+<p class="font-caption text-caption text-text-muted">Динамика вегетации текущего 2025 года в сопоставлении с историческими профилями предшествующих сезонов</p>
+</div>
+<!-- Legend Items -->
+<div class="flex flex-wrap items-center gap-3 text-caption font-caption">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-sensor-s2 rounded-full"></span>
+<span class="font-body-medium text-text-primary">2025 Пшеница</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-secondary rounded-full"></span>
+<span class="text-text-secondary">2024 Пар</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-sensor-landsat rounded-full"></span>
+<span class="text-text-secondary">2023 Подсолнечник</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-status-warning rounded-full"></span>
+<span class="text-text-secondary">2022 Кукуруза</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-sensor-modis rounded-full"></span>
+<span class="text-text-secondary">2021 Ячмень</span>
+</div>
+</div>
+</div>
+<!-- SVG Plot Arena -->
+<div class="bg-surface-sunken rounded-lg p-space-3 relative">
+<div class="w-full h-64 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 900 240">
+<defs>
+<!-- Area gradient for 2025 -->
+<lineargradient id="ndvi2025Grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2a78d6" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#2a78d6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Y-Axis Gridlines & Reference Labels -->
+<!-- 0.8 -->
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="45" x2="880" y1="30" y2="30"></line>
+<text fill="#898781" font-size="11" text-anchor="end" x="35" y="34">0.8</text>
+<!-- 0.6 -->
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="45" x2="880" y1="80" y2="80"></line>
+<text fill="#898781" font-size="11" text-anchor="end" x="35" y="84">0.6</text>
+<!-- 0.4 -->
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="45" x2="880" y1="130" y2="130"></line>
+<text fill="#898781" font-size="11" text-anchor="end" x="35" y="134">0.4</text>
+<!-- 0.2 -->
+<line stroke="#e1e0d9" stroke-dasharray="3 3" stroke-width="1" x1="45" x2="880" y1="180" y2="180"></line>
+<text fill="#898781" font-size="11" text-anchor="end" x="35" y="184">0.2</text>
+<!-- Baseline 0.0 -->
+<line stroke="#e1e0d9" stroke-width="1" x1="45" x2="880" y1="215" y2="215"></line>
+<!-- Month Vertical Guides & Labels (Apr -> Oct) -->
+<!-- Апр -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="90" x2="90" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="90" y="232">Апр</text>
+<!-- Май -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="220" x2="220" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="220" y="232">Май</text>
+<!-- Июн -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="350" x2="350" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="350" y="232">Июн</text>
+<!-- Июл -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="480" x2="480" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="480" y="232">Июл</text>
+<!-- Авг -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="610" x2="610" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="610" y="232">Авг</text>
+<!-- Сен -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="740" x2="740" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="740" y="232">Сен</text>
+<!-- Окт -->
+<line stroke="#e1e0d9" stroke-opacity="0.6" stroke-width="1" x1="850" x2="850" y1="20" y2="215"></line>
+<text fill="#898781" font-size="11" text-anchor="middle" x="850" y="232">Окт</text>
+<!-- 2024: Чистый пар (плоская низкая кривая ~0.15-0.22) -->
+<path d="M 60 185 Q 220 180 350 175 T 610 182 T 870 190" fill="none" stroke="#5f5e5b" stroke-dasharray="4 2" stroke-width="1.75"></path>
+<!-- 2021: Озимый ячмень (ранний пик в мае ~0.71, резкий спад к июлю) -->
+<path d="M 60 160 C 130 110, 180 55, 230 52 C 280 50, 320 120, 360 170 C 420 190, 600 185, 870 188" fill="none" stroke="#1baf7a" stroke-width="1.75"></path>
+<!-- 2022: Кукуруза (поздний рост, пик в августе ~0.78) -->
+<path d="M 60 195 C 180 190, 340 130, 450 70 C 530 35, 620 40, 690 110 C 760 175, 820 190, 870 190" fill="none" stroke="#fab219" stroke-width="1.75"></path>
+<!-- 2023: Подсолнечник (пик в июле ~0.82) -->
+<path d="M 60 190 C 200 185, 330 110, 420 45 C 470 25, 520 45, 600 130 C 680 180, 780 185, 870 188" fill="none" stroke="#eb6834" stroke-width="2"></path>
+<!-- 2025: Озимая пшеница (текущий сезон: быстрый старт, пик в мае 0.74, спад из-за стресса в июле, уход на созревание) -->
+<path d="M 60 145 C 130 95, 190 45, 240 45 C 290 48, 340 100, 420 145 C 480 175, 520 185, 560 188" fill="none" stroke="#2a78d6" stroke-width="3"></path>
+<!-- Filled area under 2025 -->
+<path d="M 60 145 C 130 95, 190 45, 240 45 C 290 48, 340 100, 420 145 C 480 175, 520 185, 560 188 L 560 215 L 60 215 Z" fill="url(#ndvi2025Grad)"></path>
+<!-- Data markers on 2025 curve -->
+<circle cx="240" cy="45" fill="#2a78d6" r="4.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="340" cy="100" fill="#2a78d6" r="3.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="440" cy="155" fill="#d03b3b" r="4.5" stroke="#ffffff" stroke-width="1.5"></circle>
+<circle cx="560" cy="188" fill="#2a78d6" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+<!-- Stress Callout Badge in July -->
+<g transform="translate(430, 105)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(11,11,11,0.08))" height="24" rx="4" stroke="#e1e0d9" stroke-width="1" width="135" x="0" y="0"></rect>
+<circle cx="10" cy="12" fill="#d03b3b" r="3.5"></circle>
+<text fill="#0b0b0b" font-size="10" font-weight="500" x="20" y="16">Засушливый стресс (июль)</text>
+</g>
+<!-- Peak Callout Badge in May -->
+<g transform="translate(230, 10)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(11,11,11,0.08))" height="22" rx="4" stroke="#e1e0d9" stroke-width="1" width="105" x="0" y="0"></rect>
+<circle cx="10" cy="11" fill="#2a78d6" r="3.5"></circle>
+<text fill="#0b0b0b" font-size="10" font-weight="500" x="20" y="15">Пик NDVI: 0,74</text>
+</g>
+</svg>
+</div>
+<!-- Bottom Telemetry Legend Bar -->
+<div class="mt-3 pt-space-2 bg-surface-card rounded p-space-3 flex flex-wrap items-center justify-between gap-2 text-caption font-caption">
+<div class="flex items-center gap-4 text-text-secondary">
+<span>Сенсоры: <b>Sentinel-2 MSI (L2A)</b></span>
+<span>Частота перекрытия: <b>каждые 3-5 дней</b></span>
+<span>Исключение облачности: <b>< 15%</b></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-text-muted">Текущая фаза:</span>
+<span class="font-medium text-text-primary">Восковая спелость / Подготовка к жатве</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Agro-Recommendation Card (2026 Season Decision Support) -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col md:flex-row items-start gap-space-4">
+<div class="w-12 h-12 rounded-xl bg-brand-weak flex items-center justify-center text-sensor-s2 shrink-0">
+<span class="material-symbols-outlined text-[28px]">psychology_alt</span>
+</div>
+<div class="flex-1 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-3 text-headline-3 text-text-primary">Агрорекомендация на сезон 2026 года</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-surface-sunken text-status-good font-medium">Алгоритм ротации V-Agro v4.2</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Расчёт: 14.08.2025</span>
+</div>
+<p class="font-body text-body text-text-primary leading-relaxed">
+            После озимой пшеницы со стрессом рекомендуется посев <strong class="text-sensor-s2 font-medium">зернобобовых (горох посевной / соя)</strong> для биологической азотфиксации (до 45–60 кг/га д.в. N) и влагосбережения в пахотном горизонте. <strong class="text-status-critical font-medium">Категорически избегать подсолнечника</strong> второй раз за 4 года во избежание вспышки заразихи (<i>Orobanche cumana</i>) и критического иссушения горизонта 150–200 см.
+          </p>
+<!-- Suggested Alternatives Pill Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-3 mt-2">
+<div class="bg-surface-sunken p-space-2 rounded-lg flex items-center justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">Горох посевной</div>
+<div class="font-caption text-caption text-text-muted">Приоритет №1 · Сорт «Флагман»</div>
+</div>
+<span class="text-status-good font-body-medium text-small font-medium">+18% маржа</span>
+</div>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex items-center justify-between">
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">Соя (ультраранняя)</div>
+<div class="font-caption text-caption text-text-muted">Приоритет №2 · Орошение / пар</div>
+</div>
+<span class="text-sensor-s2 font-body-medium text-small font-medium">+14% маржа</span>
+</div>
+<div class="bg-surface-sunken p-space-2 rounded-lg flex items-center justify-between opacity-60">
+<div>
+<div class="font-body-medium text-body-medium text-text-muted line-through">Подсолнечник</div>
+<div class="font-caption text-caption text-status-critical">Запрещено регламентом</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-status-critical">block</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

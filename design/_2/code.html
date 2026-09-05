@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full">
+<div class="flex flex-col lg:flex-row gap-space-4 w-full">
+<!-- Left Configuration Sub-Panel (320px) -->
+<div class="w-full lg:w-[320px] flex-shrink-0 flex flex-col gap-space-3">
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-4">
+<!-- Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-sensor-s2 text-[20px]">tune</span>
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Экспорт данных</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-brand-weak text-sensor-s2 font-caption text-caption uppercase tracking-wider">Пресет</span>
+</div>
+<!-- Target Scope -->
+<div class="flex flex-col gap-space-2">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">Область выгрузки</label>
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center gap-2.5 p-2 rounded-lg bg-surface-sunken cursor-pointer transition-colors hover:bg-surface-container-high">
+<input checked="" class="w-4 h-4 text-sensor-s2 accent-sensor-s2 cursor-pointer" name="scope" type="radio"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary leading-tight">Все полигоны (3 поля)</span>
+<span class="font-caption text-caption text-text-muted">4 820 га • Шпаковский район</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-2 rounded-lg bg-transparent hover:bg-surface-sunken cursor-pointer transition-colors">
+<input class="w-4 h-4 text-sensor-s2 accent-sensor-s2 cursor-pointer" name="scope" type="radio"/>
+<div class="flex flex-col min-w-0">
+<span class="font-body text-body text-text-secondary leading-tight">Выбранный контур</span>
+<span class="font-caption text-caption text-text-muted">Поле #104-Юг (Озимая пшеница)</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Presets Quick Choice -->
+<div class="flex flex-col gap-space-2">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">Шаблоны выгрузки</label>
+<div class="flex flex-col gap-1">
+<button class="w-full text-left p-2.5 rounded-lg bg-brand-weak text-sensor-s2 font-body-medium text-body-medium flex items-center justify-between group">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span class="truncate">Полный пакет аналитики (ZIP)</span>
+</div>
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container-high text-text-secondary hover:text-text-primary font-body text-body flex items-center justify-between transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+<span class="truncate">Временные ряды (CSV/Parquet)</span>
+</div>
+<span class="font-caption text-caption text-text-muted">.csv</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container-high text-text-secondary hover:text-text-primary font-body text-body flex items-center justify-between transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px]">map</span>
+<span class="truncate">Растры (GeoTIFF NDVI/EVI)</span>
+</div>
+<span class="font-caption text-caption text-text-muted">.tif</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-lg bg-surface-sunken hover:bg-surface-container-high text-text-secondary hover:text-text-primary font-body text-body flex items-center justify-between transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="truncate">Отчет для субсидий (PDF)</span>
+</div>
+<span class="font-caption text-caption text-text-muted">.pdf</span>
+</button>
+</div>
+</div>
+<!-- Format & Interpolation Parameters -->
+<div class="flex flex-col gap-space-3 pt-space-2">
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">Временной шаг</label>
+<div class="relative">
+<select class="w-full h-8 px-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-sensor-s2">
+<option>5 дней (с интерполяцией)</option>
+<option>10 дней (Sentinel-2 cadence)</option>
+<option>По датам безоблачных съёмок</option>
+<option>Декадный агрометеошаг</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-[16px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">Координатная сетка</label>
+<div class="relative">
+<select class="w-full h-8 px-3 bg-surface-sunken rounded-lg font-small text-small text-text-primary appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-sensor-s2">
+<option>WGS 84 (EPSG:4326)</option>
+<option>WGS 84 / UTM zone 37N (EPSG:32637)</option>
+<option>МСК-26 Ставропольский край</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-[16px] text-text-muted pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Indices Checkboxes -->
+<div class="flex flex-col gap-2">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">Каналы & Метеослои</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-sunken cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-sensor-s2 accent-sensor-s2 cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-primary">NDVI</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-sunken cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-sensor-s2 accent-sensor-s2 cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-primary">NDWI</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-sunken cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-sensor-s2 accent-sensor-s2 cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-primary">ERA5 Погода</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-sunken cursor-pointer">
+<input class="w-4 h-4 rounded text-sensor-s2 accent-sensor-s2 cursor-pointer" type="checkbox"/>
+<span class="font-small text-small text-text-secondary">EVI / SAVI</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Submit Pipeline Action -->
+<button class="w-full h-9 bg-sensor-s2 hover:bg-primary text-on-primary rounded-lg font-body-medium text-body-medium flex items-center justify-center gap-2 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+<span>Сформировать архив</span>
+</button>
+</div>
+<!-- Quick Satellite Sync Status Widget -->
+<div class="bg-surface-card rounded-xl p-space-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-good animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-primary font-medium">Шлюз Copernicus & USGS</span>
+<span class="font-caption text-caption text-text-muted">Актуальность: 28 мин назад</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">cloud_sync</span>
+</div>
+</div>
+<!-- Main Workspace (Export Matrix, API hub, Run History) -->
+<div class="flex-1 flex flex-col gap-space-4 min-w-0">
+<!-- Section 1: Fast Pipeline Export Cards -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Быстрый экспорт и генерация пакета</h2>
+</div>
+<span class="font-caption text-caption text-text-muted">Сезон 2024 / 2025 • Готово к скачиванию</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-3">
+<!-- Card 1: Time-series tabular -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-2">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-sunken flex items-center justify-center text-sensor-s2">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-text-secondary font-caption text-caption">CSV • Parquet</span>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mt-1">Временные ряды NDVI/EVI</h3>
+<p class="font-body text-body text-text-secondary line-clamp-2">
+                Сглаженные медианные профили с шагом 5 дней, маски облачности CloudScore и ряды осадков ERA5-Land.
+              </p>
+</div>
+<div class="pt-space-4 flex flex-col gap-space-2">
+<div class="flex items-center justify-between text-text-muted font-caption text-caption">
+<span>Объем данных:</span>
+<span class="font-body-medium text-body-medium text-text-primary">~4.2 МБ</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-8 bg-sensor-s2 hover:bg-primary text-on-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors" onclick="simulateDownload(this, 'CSV')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Скачать CSV</span>
+</button>
+<button class="px-2.5 h-8 bg-surface-sunken hover:bg-surface-container-high text-text-primary rounded-lg font-small text-small transition-colors" onclick="simulateDownload(this, 'Parquet')" title="Скачать Parquet">
+                  .parquet
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 2: GeoTIFF Rasters -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-2">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-sunken flex items-center justify-center text-sensor-landsat">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-text-secondary font-caption text-caption">COG GeoTIFF</span>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mt-1">Растровые карты вегетации</h3>
+<p class="font-body text-body text-text-secondary line-clamp-2">
+                18 ортотрансформированных сцен Sentinel-2 L2A с пространственным разрешением 10 м/пиксель.
+              </p>
+</div>
+<div class="pt-space-4 flex flex-col gap-space-2">
+<div class="flex items-center justify-between text-text-muted font-caption text-caption">
+<span>18 сцен в архиве:</span>
+<span class="font-body-medium text-body-medium text-text-primary">~184 МБ</span>
+</div>
+<button class="w-full h-8 bg-sensor-s2 hover:bg-primary text-on-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors" onclick="simulateDownload(this, 'GeoTIFF')">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Скачать GeoTIFF</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Certified PDF Report -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-2">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-sunken flex items-center justify-center text-status-serious">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-sunken text-text-secondary font-caption text-caption">PDF • ГОСТ ЭЦП</span>
+</div>
+<h3 class="font-headline-3 text-headline-3 text-text-primary mt-1">Акт детекции аномалий</h3>
+<p class="font-body text-body text-text-secondary line-clamp-2">
+                Верифицированный отчет для страховых компаний и регионального Минсельхоза с метеовыпиской засухи.
+              </p>
+</div>
+<div class="pt-space-4 flex flex-col gap-space-2">
+<div class="flex items-center justify-between text-text-muted font-caption text-caption">
+<span>Формат документа:</span>
+<span class="font-body-medium text-body-medium text-status-good flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Сертифицирован
+                </span>
+</div>
+<button class="w-full h-8 bg-surface-sunken hover:bg-surface-container-high text-text-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors" onclick="simulateDownload(this, 'PDF')">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Сформировать PDF</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: API & Integrations Hub -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sensor-s2 text-[20px]">webhook</span>
+<div>
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">Интеграция по API и вебхуки</h2>
+<p class="font-caption text-caption text-text-muted">Прямой коннектор к агрономическим ERP (1С:Агро, Cropwise, Trimble)</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-brand-weak text-sensor-s2 font-caption text-caption">v1.4 REST Stable</span>
+<a class="font-small text-small text-sensor-s2 hover:underline flex items-center gap-1" href="#">
+<span>Документация OpenAPI</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Endpoint code preview -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-caption text-caption text-text-muted uppercase tracking-wider">REST API Endpoint</label>
+<span class="font-caption text-caption text-text-muted">Поддерживает GZIP / Brotli компрессию</span>
+</div>
+<div class="relative bg-surface-sunken rounded-lg p-3 font-mono text-[13px] text-text-primary flex items-center justify-between overflow-x-auto">
+<div class="flex items-center gap-2 min-w-0 pr-4">
+<span class="px-1.5 py-0.5 rounded bg-status-good/10 text-status-good font-semibold text-[11px]">GET</span>
+<span class="text-text-muted truncate select-all">https://api.vegawatch.ru/v1/telemetry/timeseries?parcel_id=<span class="text-primary font-medium">RU-STA-2025-0894</span>&indices=<span class="text-primary font-medium">ndvi,ndwi</span>&format=json</span>
+</div>
+<button class="flex-shrink-0 p-1.5 hover:bg-surface-card rounded text-text-muted hover:text-text-primary transition-colors" onclick="copyToClipboard('https://api.vegawatch.ru/v1/telemetry/timeseries?parcel_id=RU-STA-2025-0894&indices=ndvi,ndwi&format=json', this)" title="Копировать URL">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Token Management & Webhook Configuration Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-3">
+<!-- API Token Snippet -->
+<div class="p-space-3 bg-surface-sunken rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Ключ авторизации (Production)</span>
+<span class="font-caption text-caption text-status-good flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-good"></span> Активен
+              </span>
+</div>
+<div class="flex items-center justify-between bg-surface-card rounded px-3 py-1.5">
+<span class="font-mono text-[13px] text-text-primary">vw_live_8f93a••••••••••••••4e1c</span>
+<div class="flex items-center gap-1">
+<button class="p-1 text-text-muted hover:text-text-primary transition-colors" onclick="copyToClipboard('vw_live_8f93a0b41c98de2f347894e1c', this)" title="Скопировать токен">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<button class="p-1 text-text-muted hover:text-text-primary transition-colors" title="Перевыпустить ключ">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+</div>
+<span class="font-caption text-caption text-text-muted">Действителен до 15.11.2025 • Права: Read Telemetry, Sync Parcels</span>
+</div>
+<!-- Webhooks Setting -->
+<div class="p-space-3 bg-surface-sunken rounded-lg flex flex-col justify-between gap-2">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted uppercase tracking-wider">Шина оповещений (Webhook)</span>
+<span class="px-1.5 py-0.5 rounded bg-brand-weak text-sensor-s2 font-caption text-caption">2 активных</span>
+</div>
+<div class="flex items-start gap-2.5">
+<input checked="" class="w-4 h-4 mt-0.5 rounded text-sensor-s2 accent-sensor-s2 cursor-pointer" id="wh-alert" type="checkbox"/>
+<label class="font-small text-small text-text-primary cursor-pointer leading-tight" for="wh-alert">
+                Уведомлять при возникновении аномалий z < −2.0σ в <span class="font-medium text-sensor-s2">1С:Агро</span> / <span class="font-medium text-sensor-s2">Telegram</span>
+</label>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-caption text-caption text-text-muted">Последнее событие: 2 часа назад (Поле #104-Юг)</span>
+<button class="font-caption text-caption text-sensor-s2 hover:underline">Настроить endpoint</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Historical Exports Log Table -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">history</span>
+<h2 class="font-headline-2 text-headline-2 text-text-primary tracking-tight">История недавних экспортов</h2>
+</div>
+<button class="font-small text-small text-sensor-s2 hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Очистить завершенные</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-sunken text-text-muted font-caption text-caption uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">ID Пакета & Описание</th>
+<th class="py-2.5 px-3">Тип файла</th>
+<th class="py-2.5 px-3">Охват / Поле</th>
+<th class="py-2.5 px-3">Дата формирования</th>
+<th class="py-2.5 px-3">Статус</th>
+<th class="py-2.5 px-3 text-right rounded-r-lg">Действие</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-small text-small">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sensor-s2 text-[18px]">table_chart</span>
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">EXP-2025-0518</div>
+<div class="font-caption text-caption text-text-muted">NDVI + NDWI ряды 5d интерполяция</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-mono text-[11px] text-text-secondary">CSV + JSON</span>
+</td>
+<td class="py-3 px-3 text-text-secondary">Все поля (3 полигона, 4 820 га)</td>
+<td class="py-3 px-3 text-text-muted">Сегодня, 13:45 MSK</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-good/10 text-status-good font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-status-good"></span> Готово (4.2 МБ)
+                  </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-sunken hover:bg-brand-weak text-text-primary hover:text-sensor-s2 font-caption text-caption transition-colors" onclick="simulateDownload(this, 'EXP-2025-0518')">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Скачать</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sensor-landsat text-[18px]">photo_library</span>
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">EXP-2025-0512</div>
+<div class="font-caption text-caption text-text-muted">Сцены Sentinel-2 L2A (18 тайлов)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-mono text-[11px] text-text-secondary">GeoTIFF (ZIP)</span>
+</td>
+<td class="py-3 px-3 text-text-secondary">Поле #104-Юг</td>
+<td class="py-3 px-3 text-text-muted">Вчера, 17:10 MSK</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-good/10 text-status-good font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-status-good"></span> Готово (184 МБ)
+                  </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-sunken hover:bg-brand-weak text-text-primary hover:text-sensor-s2 font-caption text-caption transition-colors" onclick="simulateDownload(this, 'EXP-2025-0512')">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Скачать</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-status-serious text-[18px]">picture_as_pdf</span>
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">ACT-INS-8911</div>
+<div class="font-caption text-caption text-text-muted">Акт ущерба от почвенной засухи (Минсельхоз)</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-mono text-[11px] text-text-secondary">PDF с ЭЦП</span>
+</td>
+<td class="py-3 px-3 text-text-secondary">Поле #108-Север</td>
+<td class="py-3 px-3 text-text-muted">22 мая, 09:20 MSK</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-good/10 text-status-good font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-status-good"></span> Подписан ЭЦП
+                  </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-sunken hover:bg-brand-weak text-text-primary hover:text-sensor-s2 font-caption text-caption transition-colors" onclick="simulateDownload(this, 'ACT-INS-8911')">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Скачать</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-sunken/60 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-sensor-modis text-[18px]">data_object</span>
+<div>
+<div class="font-body-medium text-body-medium text-text-primary">EXP-2025-0480</div>
+<div class="font-caption text-caption text-text-muted">Векторные контуры с метаданными севооборота</div>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-sunken font-mono text-[11px] text-text-secondary">GeoJSON / SHP</span>
+</td>
+<td class="py-3 px-3 text-text-secondary">Все поля хозяйства</td>
+<td class="py-3 px-3 text-text-muted">19 мая, 11:05 MSK</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-status-good/10 text-status-good font-caption text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-status-good"></span> Готово (1.1 МБ)
+                  </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-sunken hover:bg-brand-weak text-text-primary hover:text-sensor-s2 font-caption text-caption transition-colors" onclick="simulateDownload(this, 'EXP-2025-0480')">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Скачать</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Ensure the active nav state is highlighted properly in the left sidebar
+  (function initActiveNav() {
+    const exportNav = document.querySelector('aside nav a[data-path="telemetry-export"]');
+    if (exportNav) {
+      exportNav.classList.remove('text-text-secondary');
+      exportNav.classList.add('bg-brand-weak', 'text-sensor-s2', 'font-medium', 'rounded-lg');
+    }
+  })();
+
+  function copyToClipboard(text, btn) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          const original = icon.innerText;
+          icon.innerText = 'check';
+          icon.classList.add('text-status-good');
+          setTimeout(() => {
+            icon.innerText = original;
+            icon.classList.remove('text-status-good');
+          }, 1800);
+        }
+      });
+    }
+  }
+
+  function simulateDownload(btn, filename) {
+    const origHTML = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span><span>Сборка...</span>';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Готово</span>';
+      setTimeout(() => {
+        btn.innerHTML = origHTML;
+        btn.disabled = false;
+      }, 1500);
+    }, 900);
+  }
+</script></main></div></body></html>

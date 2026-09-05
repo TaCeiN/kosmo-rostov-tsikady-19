@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed-variant":"#713700","on-tertiary-container":"#fffbff","on-tertiary-fixed":"#301400","tertiary-fixed-dim":"#ffb784","surface-bright":"#fcf8f8","tertiary-container":"#b65c00","inverse-primary":"#a8c8ff","outline-variant":"#c1c6d4","on-tertiary":"#ffffff","surface-container-low":"#f6f3f2","error-container":"#ffdad6","background":"#fcf8f8","brand-weak":"#cde2fb","on-primary-fixed-variant":"#00468a","gridline":"#e1e0d9","text-secondary":"#52514e","text-muted":"#898781","surface-container-high":"#ebe7e7","on-primary-container":"#fefcff","sensor-s2":"#2a78d6","outline":"#727784","border-hairline":"rgba(11, 11, 11, 0.10)","surface-dim":"#dcd9d9","sensor-landsat":"#eb6834","primary-fixed-dim":"#a8c8ff","surface-sunken":"#f0efec","surface-container":"#f0edec","status-critical":"#d03b3b","primary":"#005bb0","surface-tint":"#005eb4","on-secondary-fixed":"#1c1c19","on-secondary-fixed-variant":"#484744","status-warning":"#fab219","status-serious":"#ec835a","text-primary":"#0b0b0b","secondary-fixed":"#e5e2de","on-primary-fixed":"#001b3c","error":"#ba1a1a","on-secondary":"#ffffff","on-error":"#ffffff","on-surface-variant":"#414752","surface-card":"#fcfcfb","inverse-on-surface":"#f3f0ef","primary-fixed":"#d5e3ff","surface":"#fcf8f8","secondary-fixed-dim":"#c9c6c2","secondary-container":"#e2dfdb","surface-page":"#f9f9f7","on-error-container":"#93000a","tertiary-fixed":"#ffdcc6","secondary":"#5f5e5b","on-primary":"#ffffff","surface-variant":"#e5e2e1","surface-container-lowest":"#ffffff","inverse-surface":"#313030","on-background":"#1c1b1b","status-good":"#0ca30c","tertiary":"#914800","primary-container":"#2474d2","on-surface":"#1c1b1b","on-secondary-container":"#64625f","sensor-modis":"#1baf7a","surface-container-highest":"#e5e2e1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"topbar-height":"56px","space-8":"32px","space-5":"20px","space-6":"24px","space-2":"8px",base:"4px","space-3":"12px","space-4":"16px","sidebar-width":"320px","space-1":"4px"},fontFamily:{body:["Geist"],caption:["Geist"],small:["Geist"],"axis-label":["Geist"],"kpi-number":["Geist"],"headline-1":["Geist"],"headline-2":["Geist"],"body-medium":["Geist"],"headline-3":["Geist"]},fontSize:{body:["14px",{lineHeight:"21px",fontWeight:"400"}],caption:["12px",{lineHeight:"16px",fontWeight:"400"}],small:["13px",{lineHeight:"18px",fontWeight:"400"}],"axis-label":["12px",{lineHeight:"16px",fontWeight:"400"}],"kpi-number":["32px",{lineHeight:"38px",fontWeight:"600"}],"headline-1":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-2":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-medium":["14px",{lineHeight:"21px",fontWeight:"500"}],"headline-3":["15px",{lineHeight:"22px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface-page font-body text-text-primary min-h-screen"><header class="fixed top-0 left-0 right-0 h-topbar-height bg-surface-card border-b border-border-hairline z-50 flex items-center justify-between px-space-4"><div class="flex items-center gap-space-3"><div class="w-8 h-8 flex items-center justify-center text-text-primary"><span class="material-symbols-outlined text-[22px]">satellite_alt</span></div><span class="font-headline-3 text-headline-3 text-text-primary tracking-tight">VegaWatch</span></div><div class="w-[420px] relative flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-text-muted text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-9 pr-space-3 bg-surface-sunken border border-border-hairline rounded-lg font-small text-small text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-container-lowest focus:border-sensor-s2" placeholder="Регион, район или населённый пункт" type="text" value="Ставропольский край"/></div><div class="flex items-center gap-space-3"><div class="flex items-center gap-space-2 bg-surface-sunken border border-border-hairline px-2.5 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-status-good"></span><span class="font-small text-small text-text-primary">Источники: 6 из 6</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><aside class="fixed left-0 top-topbar-height bottom-0 w-sidebar-width bg-surface-card border-r border-border-hairline z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-3"><div class="px-space-3 py-space-2 mb-space-2"><span class="font-caption text-caption text-text-muted uppercase tracking-wider">Инструменты мониторинга</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-brand-weak text-sensor-s2 font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-3 px-space-3 py-space-2 transition-colors bg-brand-weak text-sensor-s2 font-medium rounded-lg" data-path="field-monitoring" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Мониторинг полей</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="spectral-indices" href="#"><span class="material-symbols-outlined text-[20px]">stacked_line_chart</span><span>Спектральные индексы</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="satellite-imagery" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Спутниковые снимки</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="anomaly-detection" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span>Детекция аномалий</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="crop-rotation" href="#"><span class="material-symbols-outlined text-[20px]">grass</span><span>История севооборота</span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-sunken hover:text-text-primary transition-colors font-body-medium text-body-medium" data-path="telemetry-export" href="#"><span class="material-symbols-outlined text-[20px]">file_download</span><span>Экспорт телеметрии</span></a></nav></div><div class="p-space-3 border-t border-border-hairline bg-surface-card"><div class="px-space-3 py-space-2 flex items-center justify-between text-text-muted font-caption text-caption"><span>Синхронизация</span><span>14:32 MSK</span></div></div></aside><div class="pl-sidebar-width pt-topbar-height min-h-screen bg-surface-page flex flex-col"><main class="w-full p-space-4 flex-1 bg-surface-page"><div class="flex flex-col w-full">
+<!-- Pinned Contextual Dropdown beneath Shell Search (fixed anchor) -->
+<div class="fixed top-topbar-height left-[360px] w-[420px] bg-surface-card shadow-sm rounded-b-lg border-x border-b border-border-hairline z-50 flex items-center justify-between px-space-3 py-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-sensor-s2 text-[18px]">location_on</span>
+<span class="font-small text-small text-text-secondary">Ставропольский край, Россия</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Субъект РФ</span>
+</div>
+<div class="flex w-full -m-space-4 min-h-[calc(100vh-56px)]">
+<!-- Left Analytical Work-Sidebar (Replaces or fills analytical slot) -->
+<aside class="w-sidebar-width shrink-0 bg-surface-card border-r border-border-hairline flex flex-col justify-between h-[calc(100vh-56px)] sticky top-topbar-height">
+<!-- Sidebar Top & List Pane -->
+<div class="flex flex-col flex-1 overflow-hidden">
+<!-- Control Actions Area -->
+<div class="p-space-3 flex flex-col gap-space-3 bg-surface-card">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-3 text-headline-3 text-text-primary">Мои полигоны</h2>
+<span class="h-5 min-w-[20px] px-1.5 rounded-full bg-surface-sunken text-text-secondary font-caption text-caption flex items-center justify-center font-medium">0</span>
+</div>
+<div class="flex flex-col gap-2">
+<button class="h-8 w-full bg-sensor-s2 hover:bg-primary text-on-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Нарисовать полигон</span>
+</button>
+<button class="h-8 w-full bg-surface-sunken hover:bg-surface-variant text-text-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+<span>Найти поля в регионе</span>
+</button>
+</div>
+</div>
+<!-- Hairline Divider -->
+<div class="h-px bg-border-hairline mx-space-3"></div>
+<!-- Search Results Count -->
+<div class="px-space-3 pt-space-3 pb-space-2 flex items-center justify-between">
+<span class="font-headline-3 text-headline-3 text-text-primary">Найдено контуров: 47</span>
+<span class="font-caption text-caption text-text-muted">OSM Overpass</span>
+</div>
+<!-- Scrollable List of Result Cards -->
+<div class="flex-1 overflow-y-auto px-space-3 space-y-2 pb-space-3">
+<!-- Card 1 -->
+<div class="p-space-3 rounded-lg border border-border-hairline bg-surface-card flex items-center justify-between gap-space-2 cursor-pointer hover:bg-surface-sunken transition-colors">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate">Контур OSM way/123454</span>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-muted">
+<span>94,2 га</span>
+<span>•</span>
+<span>farmland</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-variant transition-colors" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="p-space-3 rounded-lg border border-border-hairline bg-surface-card flex items-center justify-between gap-space-2 cursor-pointer hover:bg-surface-sunken transition-colors">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate">Контур OSM way/123455</span>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-muted">
+<span>210,6 га</span>
+<span>•</span>
+<span>farmland</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-variant transition-colors" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Card 3: Selected State -->
+<div class="p-space-3 rounded-lg border-[1.5px] border-sensor-s2 bg-brand-weak flex items-center justify-between gap-space-2 cursor-pointer">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-medium text-body-medium text-text-primary font-medium truncate">Контур OSM way/123456</span>
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-s2"></span>
+</div>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-secondary">
+<span class="font-medium text-text-primary">128,4 га</span>
+<span>•</span>
+<span>farmland</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-sensor-s2 bg-surface-card hover:bg-surface-sunken transition-colors shadow-sm" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+<!-- Card 4 -->
+<div class="p-space-3 rounded-lg border border-border-hairline bg-surface-card flex items-center justify-between gap-space-2 cursor-pointer hover:bg-surface-sunken transition-colors">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate">Контур OSM way/123457</span>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-muted">
+<span>65,1 га</span>
+<span>•</span>
+<span>farmland</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-variant transition-colors" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Card 5 -->
+<div class="p-space-3 rounded-lg border border-border-hairline bg-surface-card flex items-center justify-between gap-space-2 cursor-pointer hover:bg-surface-sunken transition-colors">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate">Контур OSM way/123458</span>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-muted">
+<span>182,3 га</span>
+<span>•</span>
+<span>farmyard</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-variant transition-colors" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Card 6 -->
+<div class="p-space-3 rounded-lg border border-border-hairline bg-surface-card flex items-center justify-between gap-space-2 cursor-pointer hover:bg-surface-sunken transition-colors">
+<div class="flex flex-col gap-1 min-w-0">
+<span class="font-body-medium text-body-medium text-text-primary truncate">Контур OSM way/123459</span>
+<div class="flex items-center gap-1.5 font-caption text-caption text-text-muted">
+<span>112,0 га</span>
+<span>•</span>
+<span>farmland</span>
+</div>
+</div>
+<button class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-variant transition-colors" title="Добавить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pinned Action Button at Bottom -->
+<div class="p-space-3 border-t border-border-hairline bg-surface-card">
+<button class="h-8 w-full bg-surface-sunken hover:bg-surface-variant text-text-primary rounded-lg font-small text-small font-medium flex items-center justify-center gap-1.5 transition-colors border border-border-hairline" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Импортировать все найденные</span>
+</button>
+</div>
+</aside>
+<!-- Main Clean Map Work Canvas -->
+<section class="flex-1 relative bg-surface-sunken overflow-hidden flex flex-col justify-between" id="map-canvas">
+<!-- 40px Coordinate Grid Background Lines -->
+<div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(to right, rgba(11, 11, 11, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(11, 11, 11, 0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+<!-- Coordinate Tick Markers & Abstract Compass Header -->
+<div class="relative z-10 p-space-4 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-space-2 bg-surface-card/90 px-space-3 py-1.5 rounded-lg border border-border-hairline shadow-sm pointer-events-auto">
+<span class="material-symbols-outlined text-[16px] text-text-muted">explore</span>
+<span class="font-caption text-caption text-text-secondary">45°02′ N, 41°58′ E • Масштаб: 1:25 000</span>
+</div>
+<div class="flex items-center gap-space-2 bg-surface-card/90 px-space-3 py-1.5 rounded-lg border border-border-hairline shadow-sm pointer-events-auto">
+<span class="w-2 h-2 rounded-full bg-sensor-s2"></span>
+<span class="font-caption text-caption text-text-primary font-medium">Режим селекции контуров</span>
+</div>
+</div>
+<!-- Abstract Vector Polygons (20 irregular agricultural parcel outlines) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 1000 800">
+<!-- Field 1 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="50,60 140,50 170,120 130,170 40,140" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 2 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="180,40 260,30 280,110 200,130" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 3 -->
+<polygon fill="#cde2fb" fill-opacity="0.25" points="290,45 420,35 440,130 380,150 290,120" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 4 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="450,50 560,40 590,130 460,150" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 5 -->
+<polygon fill="#cde2fb" fill-opacity="0.25" points="610,60 740,40 760,140 680,160 600,120" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 6 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="770,50 890,30 920,130 800,150" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 7 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="60,190 150,180 180,280 80,300" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 8 -->
+<polygon fill="#cde2fb" fill-opacity="0.35" points="190,150 280,140 320,240 210,260" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 9 -->
+<polygon fill="#cde2fb" fill-opacity="0.2" points="340,170 460,160 480,270 360,290" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Selected Polygon (way/123456) at points around (510, 200) -->
+<polygon class="pointer-events-auto cursor-pointer filter drop-shadow-sm" fill="#cde2fb" fill-opacity="0.75" points="500,170 650,160 670,290 600,310 490,280" stroke="#2a78d6" stroke-width="2.5"></polygon>
+<!-- Field 10 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="690,180 810,160 840,280 710,290" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 11 -->
+<polygon fill="#cde2fb" fill-opacity="0.25" points="830,170 950,150 970,270 860,280" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 12 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="70,330 180,320 210,460 90,480" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 13 -->
+<polygon fill="#cde2fb" fill-opacity="0.2" points="230,300 350,280 380,420 250,440" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 14 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="390,320 480,310 500,450 410,470" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 15 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="520,330 640,320 660,450 540,470" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 16 -->
+<polygon fill="#cde2fb" fill-opacity="0.25" points="680,310 800,300 820,440 700,460" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 17 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="840,310 940,300 960,420 860,450" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 18 -->
+<polygon fill="#cde2fb" fill-opacity="0.25" points="110,510 240,500 270,640 140,660" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 19 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="290,470 430,460 460,610 320,630" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 20 -->
+<polygon fill="#cde2fb" fill-opacity="0.35" points="480,490 620,480 650,650 510,670" stroke="#2a78d6" stroke-width="1"></polygon>
+<!-- Field 21 -->
+<polygon fill="#cde2fb" fill-opacity="0.3" points="660,490 790,480 820,630 690,650" stroke="#2a78d6" stroke-width="1"></polygon>
+</svg>
+<!-- Context Popover for Selected Polygon (240px wide) -->
+<div class="absolute left-[56%] top-[24%] w-[240px] bg-surface-card rounded-lg border border-border-hairline shadow-sm p-space-3 z-30 flex flex-col gap-2.5 animate-in fade-in duration-150">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-sensor-s2">polyline</span>
+<span class="font-headline-3 text-headline-3 text-text-primary truncate">way/123456</span>
+</div>
+<button class="text-text-muted hover:text-text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="h-px bg-border-hairline -mx-space-3"></div>
+<div class="flex flex-col gap-1.5 py-0.5">
+<div class="flex items-center justify-between font-caption text-caption">
+<span class="text-text-secondary">Площадь</span>
+<span class="font-medium text-text-primary">128,4 га</span>
+</div>
+<div class="flex items-center justify-between font-caption text-caption">
+<span class="text-text-secondary">Тип</span>
+<span class="font-medium text-text-primary">Пашня</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-8 bg-sensor-s2 hover:bg-primary text-on-primary rounded-lg font-small text-small font-medium flex items-center justify-center transition-colors shadow-sm" type="button">
+            Анализировать
+          </button>
+<button class="px-2.5 h-8 bg-surface-card hover:bg-surface-sunken text-text-primary rounded-lg font-small text-small font-medium border border-border-hairline transition-colors" type="button">
+            Сохранить
+          </button>
+</div>
+</div>
+<!-- Map Overlay Bottom Controls: Zoom (Left) and OSM Attribution (Right) -->
+<div class="relative z-20 p-space-4 flex items-end justify-between pointer-events-none">
+<!-- Zoom Controls -->
+<div class="flex flex-col rounded-lg bg-surface-card border border-border-hairline shadow-sm overflow-hidden pointer-events-auto">
+<button class="w-8 h-8 flex items-center justify-center text-text-primary hover:bg-surface-sunken transition-colors active:bg-surface-variant" title="Приблизить" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="h-px bg-border-hairline w-full"></div>
+<button class="w-8 h-8 flex items-center justify-center text-text-primary hover:bg-surface-sunken transition-colors active:bg-surface-variant" title="Отдалить" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+<!-- Scale & OSM Attribution -->
+<div class="flex items-center gap-space-3 pointer-events-auto">
+<div class="flex items-center gap-1 bg-surface-card/90 px-2 py-1 rounded border border-border-hairline text-text-muted font-caption text-caption">
+<div class="w-8 h-1 bg-text-muted"></div>
+<span>500 м</span>
+</div>
+<span class="font-caption text-caption text-text-muted select-none">
+            © OpenStreetMap contributors
+          </span>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>
